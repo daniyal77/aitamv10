@@ -2,21 +2,18 @@
 
 namespace Modules\Employee\App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\Employee\Database\Factories\EmployeeFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Employee extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
      */
-    protected $fillable = [];
+    protected $guarded = ['id', 'user_id'];
 
-    protected static function newFactory(): EmployeeFactory
-    {
-        //return EmployeeFactory::new();
-    }
+
 }

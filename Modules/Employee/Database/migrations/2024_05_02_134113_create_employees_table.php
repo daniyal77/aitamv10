@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,37 +12,31 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('last_name');
+            $table->integer('personal_id')->unsigned();
             $table->string('id_code', 10);
-            $table->string('identity_serial_number', 50);
-            $table->foreignId('job')->references('id')->on('salaries');
-            $table->foreignId('shift_work_id')->references('id')->on('hours_of_works');
-            $table->boolean('is_marriage')->default(0);
-            $table->boolean('is_pay_slip')->default(0);
-            $table->string('contract_type');
+            $table->boolean('is_marriage')->default(false);
+            $table->enum('the_end_of_service', ['YES', 'NO', 'WOMEN']);
+            $table->string('child_number');
+            $table->foreignId('pay_slip');
+            $table->boolean('is_pay_slip')->default(false);
+            $table->enum('contract_type', ['daily_worker', 'temporary', 'human']);
             $table->string('contract_number');
             $table->date('start_contract');
             $table->date('end_contract');
-            $table->enum('the_end_of_service', ['1', '2', '3']);
-            $table->unsignedTinyInteger('number_of_children')->default(0);
             $table->unsignedBigInteger('expertise')->default(0);
-            $table->unsignedTinyInteger('overtimeـrate')->default(1);
-            $table->unsignedTinyInteger('overnightـrate')->default(1);
-            $table->string('personnel_id', 15);
+            $table->unsignedBigInteger('severance_pay')->default(0);
+            $table->unsignedTinyInteger('overestimate')->default(1);
+            $table->string('insurance_number');
+            $table->integer('personnel_number')->unsigned()->unique();
             $table->unsignedBigInteger('employee_insurance')->default(0);
             $table->unsignedBigInteger('master_insurance')->default(0);
-            $table->string('address1');
-            $table->string('address2')->nullable();
-            $table->string('address3')->nullable();
-            $table->string('mobile1', 20);
-            $table->string('mobile2', 20)->nullable();
-            $table->string('mobile3', 20)->nullable();
+            $table->unsignedBigInteger('supplementary_insurance')->default(0);
             $table->string('bank_name');
             $table->string('bank_shabah');
             $table->string('bank_id_cart');
             $table->string('bank_hesab');
             $table->foreignId('user_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
