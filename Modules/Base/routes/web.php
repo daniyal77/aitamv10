@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Employee\App\Http\Controllers\EmployeeController;
+use Modules\Base\App\Http\Controllers\BaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,6 @@ use Modules\Employee\App\Http\Controllers\EmployeeController;
 |
 */
 
-Route::resource('employee', EmployeeController::class)->names('employee');
+Route::group([], function () {
+    Route::resource('base', BaseController::class)->names('base');
+});
