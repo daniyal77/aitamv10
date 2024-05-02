@@ -1,0 +1,18 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use App\Services\Models\ServiceModel;
+
+use $NAMESPACE$\Traits\$FOLDER_NAME$\$CLASS_RELATIONS_SHIPS$;
+use $NAMESPACE$\Traits\$FOLDER_NAME$\$CLASS_FIELDS$;
+use $NAMESPACE$\Traits\$FOLDER_NAME$\$CLASS_CACHE$;
+
+class $CLASS$ extends ServiceModel
+{
+   use $CLASS_RELATIONS_SHIPS$,$CLASS_FIELDS$,$CLASS_CACHE$;
+   function modelClass()
+    {
+        // TODO: Implement modelClass() method.
+    }
+}
