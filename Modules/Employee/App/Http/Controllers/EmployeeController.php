@@ -5,10 +5,20 @@ namespace Modules\Employee\App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Modules\Employee\App\Enums\EndOfService;
+use Modules\Employee\App\Http\Requests\EmployeeRequest;
+use Modules\Employee\App\Services\EmployeeService;
 
 class EmployeeController extends Controller
 {
+
+    private EmployeeService $employeeService;
+
+    public function __construct(EmployeeService $employeeService)
+{
+    $this->employeeService = $employeeService;
+}
+
     /**
      * Display a listing of the resource.
      */
@@ -22,15 +32,16 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employee::create');
+        $dataReconcilement= $this->employeeService->dataReconcilement();
+        return view('employee::create', compact('dataReconcilement'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(EmployeeRequest $request): RedirectResponse
     {
-        //
+       dd($request->all());
     }
 
     /**

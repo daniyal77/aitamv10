@@ -15,5 +15,4 @@ use Modules\Base\App\Http\Controllers\BaseController;
 */
 
 Route::group([], function () {
-    Route::resource('base', BaseController::class)->names('base');
 });

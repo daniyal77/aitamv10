@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-class Setting
+class Setting extends Enum
 {
 
     const  SMS_ADAPTER_ACTIVE = 'SMS_ADAPTER_ACTIVE';

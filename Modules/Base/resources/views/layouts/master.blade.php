@@ -191,7 +191,7 @@
     <script src="{{asset('assets/admin/js/sweetalert.min.js')}}"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
     @yield('css')
-    @stack('css_include')
+    @stack('style')
 </head>
 
 <body class="main-body leftmenu">
@@ -239,7 +239,7 @@
 <script src="{{ asset('assets/admin/js/dataTables.bootstrap4.min.js') }}"></script>
 
 @yield('js')
-@stack('js_include')
+@stack('script')
 </body>
 </html>
 
