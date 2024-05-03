@@ -10,10 +10,10 @@
                         <div class="row pb-4 mb-4 border-bottom row-sm">
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="name">{{trans('employee::employee.full_name')}}
+                                    <label for="personal_id">{{trans('employee::employee.full_name')}}
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <select class="form-control" name="" id="">
+                                    <select class="form-control" name="personal_id" id="personal_id">
                                         <option value="1">1</option>
                                     </select>
                                 </div>
@@ -56,20 +56,19 @@
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
-                                    <label for="number_of_children"> تعداد فرزندان <span
+                                    <label for="child_number"> تعداد فرزندان <span
                                             class="text-danger">*</span></label>
-                                    <input id="number_of_children" class="form-control"
-                                           name="number_of_children" maxlength="255" required="required" value="0">
-
+                                    <input id="child_number" class="form-control"
+                                           name="child_number" maxlength="255" required="required" value="0">
                                 </div>
                             </div>
                         </div>
                         <div class="row pb-4 mb-4 border-bottom row-sm">
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
-                                    <label for="job">فیش حقوقی<span class="text-danger">*</span></label>
-                                    <select id="job" class="form-control" name="job" required="required">
-                                        <option>لطفا انتخاب نمایید</option>
+                                    <label for="pay_slip">فیش حقوقی<span class="text-danger">*</span></label>
+                                    <select id="pay_slip" class="form-control" name="pay_slip" required="required">
+                                        <option value="1">1</option>
                                     </select>
 
                                 </div>
@@ -175,10 +174,10 @@
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
-                                    <label for="personnel_id"> شماره پرسنلی دستگاه حضور و غیاب
+                                    <label for="personnel_number"> شماره پرسنلی دستگاه حضور و غیاب
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input id="personnel_id" class="form-control" name="personnel_id"
+                                    <input id="personnel_number" class="form-control" name="personnel_number"
                                            required="required" maxlength="255">
 
                                 </div>

@@ -13,7 +13,7 @@ class Employee extends Model
     /**
      * The attributes that are mass assignable.
      */
-    protected $guarded = ['id', 'user_id'];
+    protected $guarded = ['id'];
 
 
 }

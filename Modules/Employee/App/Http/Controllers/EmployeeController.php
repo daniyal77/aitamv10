@@ -3,9 +3,11 @@
 namespace Modules\Employee\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Modules\Employee\App\Enums\EndOfService;
 use Modules\Employee\App\Http\Requests\EmployeeRequest;
 use Modules\Employee\App\Services\EmployeeService;
 
@@ -15,9 +17,9 @@ class EmployeeController extends Controller
     private EmployeeService $employeeService;
 
     public function __construct(EmployeeService $employeeService)
-{
-    $this->employeeService = $employeeService;
-}
+    {
+        $this->employeeService = $employeeService;
+    }
 
     /**
      * Display a listing of the resource.
@@ -30,9 +32,9 @@ class EmployeeController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        $dataReconcilement= $this->employeeService->dataReconcilement();
+        $dataReconcilement = $this->employeeService->dataReconcilement();
         return view('employee::create', compact('dataReconcilement'));
     }
 
@@ -41,7 +43,8 @@ class EmployeeController extends Controller
      */
     public function store(EmployeeRequest $request): RedirectResponse
     {
-       dd($request->all());
+        $this->employeeService->createEmployee($request->all());
+        return redirect()->route('employee.index')->with('suc', 'کارمند جدید باموفقیت ذخیره شد');
     }
 
     /**
