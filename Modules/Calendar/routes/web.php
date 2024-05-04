@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Employee\App\Http\Controllers\EmployeeController;
+use Modules\Calendar\App\Http\Controllers\CalendarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +14,6 @@ use Modules\Employee\App\Http\Controllers\EmployeeController;
 |
 */
 
-Route::resource('employee', EmployeeController::class)->names('employee');
-Route::get('employee-trash', [EmployeeController::class, 'trash'])->name('employee.trash');
-
-
-Route::get('employee-request', [EmployeeController::class, 'trash'])->name('employee.request');
-
-
+Route::group([], function () {
+    Route::resource('calendar', CalendarController::class)->names('calendar');
+});
