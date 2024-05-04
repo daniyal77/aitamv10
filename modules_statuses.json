@@ -1,5 +1,6 @@
 {
     "Employee": true,
     "Base": true,
-    "Calendar": true
+    "Calendar": true,
+    "Vacation": true
 }
