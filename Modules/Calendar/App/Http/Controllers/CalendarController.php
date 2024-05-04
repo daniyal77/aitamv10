@@ -36,7 +36,7 @@ class CalendarController extends Controller
      * @param Request $request
      * @return bool
      */
-    public function store(Request $request)
+    public function store(Request $request): bool
     {
         $userId = 0;
         $roleId = 0;

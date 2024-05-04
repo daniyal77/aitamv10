@@ -25,6 +25,7 @@
 @push('script')
     <script src='{{ asset('assets/original/js/fullcalendar/main.min.js') }}'></script>
     <script src='{{ asset('assets/original/js/fullcalendar/locales-all.min.js') }}'></script>
+
     <script>
         var teachers = "{{ $calendars }}";
         let aa = JSON.parse(teachers.replace(/&quot;/g, '"'));

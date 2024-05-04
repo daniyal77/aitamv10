@@ -249,8 +249,6 @@
 
 
 
-<script src="{{asset('assets/original/js/jquery/jquery.min.js')}}"></script>
-
 <script src="{{ asset('assets/original/js/sweet-alert/sweetalert.min.js') }}"></script>
 @stack('script')
 </body>
