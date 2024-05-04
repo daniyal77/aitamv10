@@ -191,9 +191,9 @@
     <link href="{{asset('assets/admin/css-rtl/sidemenu/sidemenu.css')}}" rel="stylesheet">
     <link href="{{asset('assets/admin/switcher/demo.css')}}" rel="stylesheet">
     <link href="{{asset('assets/admin/admin.css')}}" rel="stylesheet">
-    <script src="{{asset('assets/admin/js/sweetalert.min.js')}}"></script>
+    <link href="{{ asset('assets/original/css/sweet-alert/sweetalert.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
-    @yield('css')
     @stack('style')
 </head>
 
@@ -240,8 +240,7 @@
 <script src="{{ asset('assets/admin/js/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/dataTables.bootstrap4.min.js') }}"></script>
-
-@yield('js')
+<script src="{{ asset('assets/original/js/sweet-alert/sweetalert.min.js') }}"></script>
 @stack('script')
 </body>
 </html>

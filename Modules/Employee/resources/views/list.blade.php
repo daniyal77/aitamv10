@@ -59,3 +59,37 @@
         </div>
     </div>
 @endsection
+@push('script')
+    <script>
+        function deleteRecord(id) {
+            let deleteUrl = '{{url("/employee")}}/' + id
+            swal({
+                title: "آیا مطمئن هستید ؟",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonText: 'تایید',
+                closeOnConfirm: false,
+                confirmButtonColor: "#ff2a01",
+                showLoaderOnConfirm: true
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    $.ajax({
+                        url: deleteUrl,
+                        method: 'DELETE',
+                        data: {"_token": "{{csrf_token()}}"},
+                        success: function (data) {
+                            swal({
+                                title: "پاک شد",
+                                text: "کارمند با موفقیت حذف شد",
+                                type: "success",
+                                confirmButtonText: 'تایید',
+                            })
+                            location.reload()
+
+                        }
+                    })
+                }
+            });
+        }
+    </script>
+@endpush
