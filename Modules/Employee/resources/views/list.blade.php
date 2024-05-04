@@ -5,11 +5,11 @@
         <div class="col-lg-12">
             <div class="card custom-card overflow-hidden">
                 <div class="card-header mb-1">
-                    <a class="btn btn-info" href="{{ route('employee.create') }}">جدید</a>
                     @if((request()->route()->getName() == 'employee.index'))
-                        <a class="btn btn-danger" href="{{ route('employee.trash') }}">حذف شده</a>
+                        <a class="btn btn-info" href="{{ route('employee.create') }}">جدید</a>
+                        <a class="btn btn-danger" href="{{ route('employee.trash') }}">مشاهده کارمندان حذف شده</a>
                     @else
-                        <a class="btn btn-green" href="{{ route('employee.index') }}">فعال</a>
+                        <a class="btn btn-green" href="{{ route('employee.index') }}">مشاهده کارمندان فعال</a>
                     @endif
                 </div>
                 <div class="card-body">
@@ -23,7 +23,9 @@
                                 <th>تاریخ شروع قرار داد</th>
                                 <th>تاریخ پایان قرار داد</th>
                                 <th>شماره پرسنلی</th>
-                                <th>عملیات</th>
+                                @if((request()->route()->getName() == 'employee.index'))
+                                    <th>عملیات</th>
+                                @endif
                             </tr>
                             </thead>
                             <tbody>
@@ -35,19 +37,22 @@
                                     <td>{{$employee->start_contract_jalali}}</td>
                                     <td>{{$employee->end_contract_jalali}}</td>
                                     <td>{{$employee->personnel_number }}</td>
-                                    <td>
-                                        <a class="btn btn-sm ml-1 btn-primary" title="مشاهده"
-                                           href="{{ route('employee.show',$employee->id) }}">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                        <a title="ویرایش" class="btn ml-1 btn-sm btn-info"
-                                           href="{{ route('employee.edit',$employee->id) }}"><i class="fas fa-edit"></i>
-                                        </a>
-                                        <span class="btn btn-sm ml-1 btn-danger" title="حذف"
-                                              onclick="deleteRecord({{$employee->id}})">
+                                    @if((request()->route()->getName() == 'employee.index'))
+                                        <td>
+                                            <a class="btn btn-sm ml-1 btn-primary" title="مشاهده"
+                                               href="{{ route('employee.show',$employee->id) }}">
+                                                <i class="fas fa-search"></i>
+                                            </a>
+                                            <a title="ویرایش" class="btn ml-1 btn-sm btn-info"
+                                               href="{{ route('employee.edit',$employee->id) }}"><i
+                                                    class="fas fa-edit"></i>
+                                            </a>
+                                            <span class="btn btn-sm ml-1 btn-danger" title="حذف"
+                                                  onclick="deleteRecord({{$employee->id}})">
                                             <i class="fas fa-trash"></i>
                                         </span>
-                                    </td>
+                                        </td>
+                                    @endif
                                 </tr>
                             @endforeach
                             {{$employees->links()}}
