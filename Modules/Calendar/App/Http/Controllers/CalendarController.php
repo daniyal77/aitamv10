@@ -5,25 +5,30 @@ namespace Modules\Calendar\App\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
-use Modules\Calendar\App\Models\Calendar;
+use Modules\Calendar\App\Services\CalendarService;
 
 class CalendarController extends Controller
 {
+
+    protected CalendarService $calendarService;
+
+    public function __construct(CalendarService $calendarService)
+    {
+        $this->calendarService = $calendarService;
+    }
+
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
-    public function index()
+    public function index(): Renderable
     {
         //todo refactor when auth
 //        $userId = Auth::user()->RoleId;
         $userId = 0;
-        $caldeners = Cache::remember('caldeners' . $userId, env('CASH_EXPIRE'), function () use ($userId) {
-            return Calendar::where('unit_id', $userId)->get()->map->only('name', 'date');
-        });
-        return view('calendar::client.index', compact('caldeners'));
+        $roleId = 0;
+        $calendars = $this->calendarService->showEventInUserOrRoleId(userId: $userId, roleId: $roleId);
+        return view('calendar::list', compact('calendars'));
     }
 
     /**
@@ -33,12 +38,14 @@ class CalendarController extends Controller
      */
     public function store(Request $request)
     {
-        $post = [
-            'date'    => $request->start_date,
-            'name'    => $request->desc,
-            'unit_id' => Auth::user()->RoleId,
-        ];
-        Calendar::create($post);
+        $userId = 0;
+        $roleId = 0;
+        $this->calendarService->addEventInUserOrRoleId(
+            userId    : $userId,
+            roleId    : $roleId,
+            start_date: $request->start_date,
+            desc      : $request->desc
+        );
         return true;
     }
 }
