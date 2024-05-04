@@ -2,66 +2,40 @@
 
 namespace Modules\Calendar\App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class CalendarController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @return Renderable
      */
     public function index()
     {
-        return view('calendar::index');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('calendar::create');
+        $userId = Auth::user()->RoleId;
+        $caldeners = Cache::remember('caldeners' . $userId, env('CASH_EXPIRE'), function () use ($userId) {
+            return Calendar::where('unit_id', $userId)->get()->map->only('name', 'date');
+        });
+        return view('calendar::client.index', compact('caldeners'));
     }
 
     /**
      * Store a newly created resource in storage.
+     * @param Request $request
+     * @return Renderable
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the specified resource.
-     */
-    public function show($id)
-    {
-        return view('calendar::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit($id)
-    {
-        return view('calendar::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, $id): RedirectResponse
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy($id)
-    {
-        //
+        $post = [
+            'date' => $request->start_date,
+            'name' => $request->desc,
+            'unit_id' => Auth::user()->RoleId,
+        ];
+        Calendar::create($post);
+        return true;
     }
 }
