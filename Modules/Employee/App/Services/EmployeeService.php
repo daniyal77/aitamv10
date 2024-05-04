@@ -3,7 +3,6 @@
 namespace Modules\Employee\App\Services;
 
 use App\Services\Models\ServiceModel;
-use Illuminate\Support\Facades\Auth;
 use Modules\Employee\App\Enums\ContractType;
 use Modules\Employee\App\Enums\EndOfService;
 use Modules\Employee\App\Models\Employee;
@@ -20,7 +19,10 @@ class EmployeeService extends ServiceModel
         return new Employee();
     }
 
-    public function dataReconcilement()
+    /**
+     * @return array
+     */
+    public function dataReconcilement(): array
     {
         return [
             'endOfServices' => EndOfService::optionList(),
@@ -35,5 +37,12 @@ class EmployeeService extends ServiceModel
         //todo remove when login Auth::user()->id ??
         $data['user_id'] = 1;
         $this->create($data);
+    }
+
+    public function updateEmployee($data, $id)
+    {
+        $data['start_contract'] = date('Y-m-d', $data['start_contract']);
+        $data['end_contract'] = date('Y-m-d', $data['end_contract']);
+        $this->update($$data, $id);
     }
 }

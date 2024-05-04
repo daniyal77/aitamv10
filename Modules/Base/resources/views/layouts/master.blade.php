@@ -149,7 +149,10 @@
             --size_text: {{$setting[$roleId. "-sizepx"]  ?? '14px'}}  ;
         }
 
-
+        .btn-green {
+            color: white !important;
+            background-color: green !important;
+        }
     </style>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">

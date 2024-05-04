@@ -37,8 +37,8 @@
                                     <select id="is_marriage" name="is_marriage" class="form-control"
                                             required="required">
                                         <option disabled="" selected="">لطفا انتخاب کنید</option>
-                                        <option value="1">بلی</option>
-                                        <option value="0">خیر</option>
+                                        <option value="1">متاهل</option>
+                                        <option value="0">مجرد</option>
                                     </select>
                                 </div>
                             </div>
@@ -154,10 +154,10 @@
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
-                                    <label for="overtime_rate">ضریب محاصبه اضافه کاری<span
+                                    <label for="overestimate">ضریب محاصبه اضافه کاری<span
                                             class="text-danger">*</span></label>
-                                    <input id="overtime_rate" class="form-control"
-                                           name="overtime_rate" maxlength="255" required="required" value="1">
+                                    <input id="overestimate" class="form-control"
+                                           name="overestimate" maxlength="255" required="required" value="1">
 
                                 </div>
                             </div>

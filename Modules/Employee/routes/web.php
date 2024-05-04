@@ -15,3 +15,4 @@ use Modules\Employee\App\Http\Controllers\EmployeeController;
 */
 
 Route::resource('employee', EmployeeController::class)->names('employee');
+Route::get('employee-trash', [EmployeeController::class,'trash'])->name('employee.trash');

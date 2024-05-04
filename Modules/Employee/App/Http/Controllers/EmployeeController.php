@@ -6,8 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Modules\Employee\App\Enums\ContractType;
+use Modules\Employee\App\Enums\EndOfService;
 use Modules\Employee\App\Http\Requests\EmployeeRequest;
 use Modules\Employee\App\Services\EmployeeService;
 
@@ -24,9 +27,19 @@ class EmployeeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('employee::list');
+        $employees = $this->employeeService->paginate();
+        return view('employee::list', compact('employees'));
+    }
+
+    /**
+     * @return Factory|\Illuminate\Foundation\Application|View|Application
+     */
+    public function trash(): Factory|\Illuminate\Foundation\Application|View|Application
+    {
+        $employees = $this->employeeService->trash();
+        return view('employee::list', compact('employees'));
     }
 
     /**
@@ -50,17 +63,23 @@ class EmployeeController extends Controller
     /**
      * Show the specified resource.
      */
-    public function show($id)
+    public function show($id): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('employee::show');
+        $employee = $this->employeeService->find($id, true)->model;
+        $contract_type = ContractType::getLabel($employee->contract_type);
+        $end_of_service = EndOfService::getLabel($employee->the_end_of_service);
+        return view('employee::show', compact('employee', 'contract_type','end_of_service'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit($id): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('employee::edit');
+
+        $employee = $this->employeeService->find($id, true)->model;
+        $contract_type = ContractType::getLabel($employee->contract_type);
+        return view('employee::edit', compact('employee', 'contract_type'));
     }
 
     /**
@@ -68,14 +87,16 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id): RedirectResponse
     {
-        //
+        $this->employeeService->updateEmployee($request->except('user_id'), $id);
+        return redirect()->route('employee.index')->with('suc', 'کارمند با موفقیت اپدیت شد');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy($id): JsonResponse
     {
-        //
+        $this->employeeService->delete($id);
+        return response()->json(['suc', 'کارمند با موفقیت اپدیت شد']);
     }
 }
