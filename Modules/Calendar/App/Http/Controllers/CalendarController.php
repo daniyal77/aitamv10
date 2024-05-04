@@ -2,6 +2,7 @@
 
 namespace Modules\Calendar\App\Http\Controllers;
 
+use GuzzleHttp\Client;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -21,8 +22,13 @@ class CalendarController extends Controller
      * Display a listing of the resource.
      * @return Renderable
      */
-    public function index(): Renderable
+    public function index()
     {
+
+//        $url = 'https://holidayapi.ir/jalali/1403/02/22';
+//        $display = file_get_contents($url);
+//        dd(json_decode($display));
+
         //todo refactor when auth
 //        $userId = Auth::user()->RoleId;
         $userId = 0;

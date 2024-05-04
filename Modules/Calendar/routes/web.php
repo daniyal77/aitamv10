@@ -14,6 +14,5 @@ use Modules\Calendar\App\Http\Controllers\CalendarController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('calendar', CalendarController::class)->only('index', 'store')->names('calendar');
-});
+Route::resource('calendar', CalendarController::class)->only('index', 'store')->names('calendar');
+
