@@ -17,6 +17,8 @@ return new class extends Migration {
             $table->unsignedInteger('role_id');
             $table->date('date');
             $table->softDeletes();
+
+            //todo remove soft delete after 6 mounth
             $table->timestamps();
         });
     }
