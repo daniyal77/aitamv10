@@ -43,6 +43,9 @@ class EmployeeService extends ServiceModel
     {
         $data['start_contract'] = date('Y-m-d', $data['start_contract']);
         $data['end_contract'] = date('Y-m-d', $data['end_contract']);
-        $this->update($$data, $id);
+        //todo remove when login Auth::user()->id ??
+        //todo add log
+        $data['user_id'] = 1;
+        $this->update($data, $id);
     }
 }

@@ -36,14 +36,16 @@
                                     <td>{{$employee->end_contract_jalali}}</td>
                                     <td>{{$employee->personnel_number }}</td>
                                     <td>
-                                        <a href="{{ route('employee.show',$employee->id) }}">
-                                            <i title="مشاهده">0</i>
+                                        <a class="btn btn-sm ml-1 btn-primary" title="مشاهده"
+                                           href="{{ route('employee.show',$employee->id) }}">
+                                            <i class="fas fa-search"></i>
                                         </a>
-                                        <a href="{{ route('employee.edit',$employee->id) }}">
-                                            <i title="ویرایش">0</i>
+                                        <a title="ویرایش" class="btn ml-1 btn-sm btn-info"
+                                           href="{{ route('employee.edit',$employee->id) }}"><i class="fas fa-edit"></i>
                                         </a>
-                                        <span class="cu-pointer" onclick="deleteRecord({{$employee->id}})">
-                                            <i title="حذف">0</i>
+                                        <span class="btn btn-sm ml-1 btn-danger" title="حذف"
+                                              onclick="deleteRecord({{$employee->id}})">
+                                            <i class="fas fa-trash"></i>
                                         </span>
                                     </td>
                                 </tr>

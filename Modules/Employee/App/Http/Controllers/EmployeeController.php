@@ -68,7 +68,7 @@ class EmployeeController extends Controller
         $employee = $this->employeeService->find($id, true)->model;
         $contract_type = ContractType::getLabel($employee->contract_type);
         $end_of_service = EndOfService::getLabel($employee->the_end_of_service);
-        return view('employee::show', compact('employee', 'contract_type','end_of_service'));
+        return view('employee::show', compact('employee', 'contract_type', 'end_of_service'));
     }
 
     /**
@@ -76,10 +76,11 @@ class EmployeeController extends Controller
      */
     public function edit($id): Factory|\Illuminate\Foundation\Application|View|Application
     {
-
+        $dataReconcilement = $this->employeeService->dataReconcilement();
         $employee = $this->employeeService->find($id, true)->model;
         $contract_type = ContractType::getLabel($employee->contract_type);
-        return view('employee::edit', compact('employee', 'contract_type'));
+        $end_of_service = EndOfService::getLabel($employee->the_end_of_service);
+        return view('employee::edit', compact('employee', 'dataReconcilement', 'contract_type', 'end_of_service'));
     }
 
     /**
@@ -87,7 +88,7 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id): RedirectResponse
     {
-        $this->employeeService->updateEmployee($request->except('user_id'), $id);
+        $this->employeeService->updateEmployee($request->except('_method','_token'), $id);
         return redirect()->route('employee.index')->with('suc', 'کارمند با موفقیت اپدیت شد');
     }
 
