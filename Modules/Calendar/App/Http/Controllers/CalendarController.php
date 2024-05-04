@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
+use Modules\Calendar\App\Models\Calendar;
 
 class CalendarController extends Controller
 {
@@ -16,7 +17,9 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $userId = Auth::user()->RoleId;
+        //todo refactor when auth
+//        $userId = Auth::user()->RoleId;
+        $userId = 0;
         $caldeners = Cache::remember('caldeners' . $userId, env('CASH_EXPIRE'), function () use ($userId) {
             return Calendar::where('unit_id', $userId)->get()->map->only('name', 'date');
         });
@@ -26,13 +29,13 @@ class CalendarController extends Controller
     /**
      * Store a newly created resource in storage.
      * @param Request $request
-     * @return Renderable
+     * @return bool
      */
     public function store(Request $request)
     {
         $post = [
-            'date' => $request->start_date,
-            'name' => $request->desc,
+            'date'    => $request->start_date,
+            'name'    => $request->desc,
             'unit_id' => Auth::user()->RoleId,
         ];
         Calendar::create($post);

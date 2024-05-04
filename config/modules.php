@@ -37,8 +37,6 @@ return [
             'views/edit'      => 'resources/views/edit.blade.php',
             'scaffold/config' => 'config/config.php',
             'composer'        => 'composer.json',
-            'assets/js/app'   => 'resources/assets/js/app.js',
-            'assets/sass/app' => 'resources/assets/sass/app.scss',
             'vite'            => 'vite.config.js',
             'package'         => 'package.json',
         ],
