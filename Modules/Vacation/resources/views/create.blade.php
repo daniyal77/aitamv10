@@ -1,6 +1,123 @@
 @extends('base::layouts.master')
-@section('breadcrumb_name','')
+@section('breadcrumb_name','ایجاد مرخصی')
 @section('content')
+    <div class="row row-sm">
+        <div class="col-lg-12 col-md-12">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <form id="form_validation" class="form-validate-summernote" method="post"
+                          action="https://portal.bodypars.ir/vacation/day/store">
+                        <div class="row row-sm">
+                            <div class="col-lg-4 col-md-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="employee_id">نام پرسنل
+                                        <span class="text-danger">*</span></label>
+                                    <select name="employee_id" class="form-control" id="employee_id">
+                                        <option value="1">1</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="start_date"> تاریخ شروع</label>
+                                    <input type="hidden" name="start_date" id="start_date_real" readonly="readonly">
+                                    <input required="required" data-msg="الزامی میباشد" id="start_date" readonly=""
+                                           class="form-control pwt-datepicker-input-element">
 
 
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="end_date"> تاریخ پایان</label>
+                                    <input type="hidden" name="end_date" id="end_date_real">
+                                    <input required="required" id="end_date" readonly=""
+                                           class="form-control pwt-datepicker-input-element">
+
+                                </div>
+                            </div>
+                            <div class=" col-12">
+                                <div class="form-group">
+                                    <label for="intro">توضیحات</label>
+                                    <textarea class="form-control" name="intro" id="intro" rows="5"></textarea>
+                                </div>
+                                <button class="btn ripple d-none btn-primary" id="spinnerBtn" type="button">
+                                    <span aria-hidden="true" class="spinner-border spinner-border-sm"
+                                          role="status"></span>
+                                    <span class="sr-only">درحال ارسال...</span>
+                                </button>
+                                <button id="submitBtn" class="btn btn-primary">ثبت</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
+
+@push('style')
+    <link rel="stylesheet" href="{{ asset('/assets/original/css/persian-datepicker/persian-datepicker.min.css') }}">
+@endpush
+@push('script')
+    <script src="{{ asset('/assets/original/js/persian-datepicker/persian-date.min.js') }}"></script>
+    <script src="{{ asset('/assets/original/js/persian-datepicker/persian-datepicker.min.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#start_date').persianDatepicker({
+                format: 'YYYY/MM/DD',
+                altField: '#start_date_real',
+                initialValue: false,
+                observer: true,
+                altFormat: 'X',
+                autoClose: true
+            });
+            $('#end_date').persianDatepicker({
+                format: 'YYYY/MM/DD',
+                altField: '#end_date_real',
+                initialValue: false,
+                observer: true,
+                altFormat: 'X',
+                autoClose: true
+            });
+        });
+    </script>
+
+    <script src="{{asset('/assets/original/js/jquery.validate.min.js')}}"></script>
+    <script>
+        $(function () {
+            let summernoteForm = $('.form-validate-summernote');
+            summernoteForm.validate({
+                errorElement: "div",
+                errorClass: 'is-invalid',
+                validClass: 'is-valid',
+                ignore: ':hidden:not(.summernote),.note-editable.card-block',
+                errorPlacement: function (error, element) {
+                    error.addClass("invalid-feedback");
+                    if (element.prop("type") === "checkbox") {
+                        error.insertAfter(element.siblings("label"));
+                    } else if (element.hasClass("summernote")) {
+                        error.insertAfter(element.siblings(".note-editor"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                }, submitHandler: function (e) {
+                    let input1 = $('#supplementary_insurance');
+                    let input2 = $('#master_insurance');
+                    let input3 = $('#employee_insurance');
+                    let input4 = $('#expertise');
+                    let input5 = $('#severance_pay');
+                    input1.val(input1.val().replace(/,/g, ''));
+                    input2.val(input2.val().replace(/,/g, ''));
+                    input3.val(input3.val().replace(/,/g, ''));
+                    input4.val(input4.val().replace(/,/g, ''));
+                    input5.val(input5.val().replace(/,/g, ''));
+                    $('#spinnerBtn').removeClass('d-none');
+                    $('#submitBtn').addClass('d-none');
+                    return true;
+                }
+            });
+        });
+    </script>
+@endpush

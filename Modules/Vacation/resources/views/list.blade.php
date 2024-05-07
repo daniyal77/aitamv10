@@ -1,5 +1,5 @@
 @extends('base::layouts.master')
-@section('breadcrumb_name','')
+@section('breadcrumb_name','لیست مرخصی')
 @section('content')
     <div class="row row-sm">
         <div class="col-lg-12">
