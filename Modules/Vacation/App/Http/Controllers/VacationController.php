@@ -3,18 +3,29 @@
 namespace Modules\Vacation\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Modules\Vacation\App\Services\VacationService;
 
 class VacationController extends Controller
 {
+    private VacationService $vacationService;
+
+    public function __construct(VacationService $vacationService)
+    {
+        $this->vacationService = $vacationService;
+    }
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('vacation::index');
+        $vacations = $this->vacationService->all();
+        return view('vacation::list', compact('vacations'));
     }
 
     /**

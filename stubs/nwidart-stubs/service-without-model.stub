@@ -11,6 +11,7 @@ use $NAMESPACE$\Traits\$FOLDER_NAME$\$CLASS_CACHE$;
 class $CLASS$ extends ServiceModel
 {
    use $CLASS_RELATIONS_SHIPS$,$CLASS_FIELDS$,$CLASS_CACHE$;
+
    function modelClass()
     {
         // TODO: Implement modelClass() method.

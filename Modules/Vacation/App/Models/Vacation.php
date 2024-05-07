@@ -2,9 +2,8 @@
 
 namespace Modules\Vacation\App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\Vacation\Database\Factories\VacationFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Vacation extends Model
 {
@@ -13,10 +12,18 @@ class Vacation extends Model
     /**
      * The attributes that are mass assignable.
      */
-    protected $fillable = [];
+    protected $guarded = ['id'];
 
-    protected static function newFactory(): VacationFactory
+    protected $appends = ['start_date_jalali', 'end_date_jalali'];
+
+    public function getStartDateJalaliAttribute(): string
     {
-        //return VacationFactory::new();
+        return verta($this->start_date)->format('Y/m/d');
     }
+
+    public function getEndDateJalaliAttribute(): string
+    {
+        return verta($this->end_date)->format('Y/m/d');
+    }
+
 }
