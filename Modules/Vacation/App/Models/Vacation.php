@@ -5,6 +5,7 @@ namespace Modules\Vacation\App\Models;
 use App\Enums\Status;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Employee\App\Models\Employee;
 
 class Vacation extends Model
 {
@@ -30,5 +31,10 @@ class Vacation extends Model
     public function status()
     {
         return Status::getLabel($this->status);
+    }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
     }
 }

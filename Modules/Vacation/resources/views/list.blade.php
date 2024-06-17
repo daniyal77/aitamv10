@@ -22,7 +22,7 @@
                             @foreach($vacations as $key=>$vacation)
                                 <tr>
                                     <td>{{++$key}}</td>
-                                    <td>{{$vacation->employee_id}}</td>
+                                    <td>{{$vacation->employee->employeeRequest->full_name}}</td>
                                     <td>{{$vacation->start_date_jalali}}</td>
                                     <td>{{$vacation->end_date_jalali}}</td>
                                     <td>{{$vacation->intro}}</td>

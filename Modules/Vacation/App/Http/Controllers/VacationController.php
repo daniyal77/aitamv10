@@ -12,6 +12,10 @@ use Modules\Vacation\App\Services\VacationService;
 
 class VacationController extends Controller
 {
+    //todo نصب دیباگبار
+    //todo استفاده از رابطه
+    //todo استفاده از کش
+    //todo برای همه ماژول ها به کار ببر
     private VacationService $vacationService;
 
     public function __construct(VacationService $vacationService)
