@@ -5,18 +5,25 @@ namespace Modules\Employee\App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Modules\Employee\App\Enums\EmployeeRequestStatus;
-use Modules\Employee\App\Models\EmployeeRequest;
+use Modules\Employee\App\Services\EmployeeRequestService;
 
 class EmployeeRequestController extends Controller
 {
+
+    private EmployeeRequestService $employeeRequestService;
+
+    public function __construct(EmployeeRequestService $employeeRequestService)
+    {
+        $this->employeeRequestService = $employeeRequestService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $employeeRequest = EmployeeRequest::all();
-        return view('employee::request.list');
+        $employeeRequest = $this->employeeRequestService->paginate();
+        return view('employee::request.list', compact('employeeRequest'));
     }
 
     /**

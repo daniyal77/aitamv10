@@ -2,8 +2,8 @@
 
 namespace Modules\Employee\App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class EmployeeRequest extends Model
 {
@@ -12,7 +12,9 @@ class EmployeeRequest extends Model
     /**
      * The attributes that are mass assignable.
      */
-    protected $fillable = [];
-
+    protected $fillable = ['name', 'last_name', 'skils', 'file_resume', 'status'];
+    protected $casts = [
+        'skils' => 'array',
+    ];
 
 }
