@@ -80,7 +80,6 @@ trait CustomEnums
     /**
      * Gets label list
      *
-     * @param array     $except
      * @param bool|bool $html
      *
      * @return array

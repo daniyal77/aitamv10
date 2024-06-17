@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Modules\Employee\App\Http\Controllers\EmployeeController;
+use Modules\Employee\App\Http\Controllers\EmployeeRequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,4 @@ Route::resource('employee', EmployeeController::class)->names('employee');
 Route::get('employee-trash', [EmployeeController::class, 'trash'])->name('employee.trash');
 
 
-Route::get('employee-request', [EmployeeController::class, 'trash'])->name('employee.request');
-
-
+Route::resource('employee-request', EmployeeRequestController::class)->names('employee.request');

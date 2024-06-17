@@ -5,7 +5,8 @@ namespace Modules\Employee\App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Modules\Employee\App\Enums\EmployeeRequestStatus;
+use Modules\Employee\App\Models\EmployeeRequest;
 
 class EmployeeRequestController extends Controller
 {
@@ -14,7 +15,8 @@ class EmployeeRequestController extends Controller
      */
     public function index()
     {
-        return view('employee::index');
+        $employeeRequest = EmployeeRequest::all();
+        return view('employee::request.list');
     }
 
     /**
