@@ -14,6 +14,7 @@ use Modules\Vacation\App\Http\Controllers\VacationController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('vacation', VacationController::class)->names('vacation');
-});
+Route::resource('vacation', VacationController::class)->except('show')->names('vacation');
+
+Route::get('vacation-checked', [VacationController::class, 'checked'])->name('vacation.checked');
+Route::get('vacation-unchecked', [VacationController::class, 'unchecked'])->name('vacation.unchecked');

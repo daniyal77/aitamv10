@@ -6,7 +6,8 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <form id="form_validation" class="form-validate-summernote" method="post"
-                          action="https://portal.bodypars.ir/vacation/day/store">
+                          action="{{ route('vacation.store') }}">
+                        @csrf
                         <div class="row row-sm">
                             <div class="col-lg-4 col-md-3 col-sm-6 col-12">
                                 <div class="form-group">
@@ -103,16 +104,6 @@
                         error.insertAfter(element);
                     }
                 }, submitHandler: function (e) {
-                    let input1 = $('#supplementary_insurance');
-                    let input2 = $('#master_insurance');
-                    let input3 = $('#employee_insurance');
-                    let input4 = $('#expertise');
-                    let input5 = $('#severance_pay');
-                    input1.val(input1.val().replace(/,/g, ''));
-                    input2.val(input2.val().replace(/,/g, ''));
-                    input3.val(input3.val().replace(/,/g, ''));
-                    input4.val(input4.val().replace(/,/g, ''));
-                    input5.val(input5.val().replace(/,/g, ''));
                     $('#spinnerBtn').removeClass('d-none');
                     $('#submitBtn').addClass('d-none');
                     return true;

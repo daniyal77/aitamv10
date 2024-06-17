@@ -13,6 +13,7 @@
                                 <th>نام ونام خانودگی</th>
                                 <th>تاریخ شروع</th>
                                 <th>تاریخ پایان</th>
+                                <th>توضیحات</th>
                                 <th>وضعیت</th>
                                 <th>عملیات</th>
                             </tr>
@@ -21,11 +22,32 @@
                             @foreach($vacations as $key=>$vacation)
                                 <tr>
                                     <td>{{++$key}}</td>
-                                    <td>{{$vacations->employee_id}}</td>
-                                    <td>{{$vacations->start_date_jalali}}</td>
-                                    <td>{{$vacations->end_date_jalali}}</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{$vacation->employee_id}}</td>
+                                    <td>{{$vacation->start_date_jalali}}</td>
+                                    <td>{{$vacation->end_date_jalali}}</td>
+                                    <td>{{$vacation->intro}}</td>
+                                    <td>{{$vacation->status()}}</td>
+                                    <td>
+                                        @if($vacation->status != 'publish')
+                                            <a class="btn btn-sm ml-1 btn-success" title="تایید مرخصی"
+                                               href="{{ route('vacation.checked',$vacation->id) }}">
+                                                <i class="fas fa-check"></i>
+                                            </a>
+                                            <a class="btn btn-sm ml-1 btn-info" title="ویرایش مرخصی"
+                                               href="{{ route('vacation.edit',$vacation->id) }}">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"
+                                               href="{{ route('vacation.destroy',$vacation->id) }}">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        @else
+                                            <a class="btn btn-sm ml-1 btn-danger" title="عدم تایید"
+                                               href="{{ route('vacation.unchecked',$employee->id) }}">
+                                                <i class="fas fa-close"></i>
+                                            </a>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

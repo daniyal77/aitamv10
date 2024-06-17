@@ -41,16 +41,11 @@ class VacationController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //
+        $this->vacationService->createVacation($request->all());
+        return redirect()->route('vacation.index')->with('suc', 'مرخصی باموفقیت ذخیره شد');
     }
 
-    /**
-     * Show the specified resource.
-     */
-    public function show($id)
-    {
-        return view('vacation::show');
-    }
+
 
     /**
      * Show the form for editing the specified resource.

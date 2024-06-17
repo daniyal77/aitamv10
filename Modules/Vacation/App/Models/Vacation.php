@@ -2,6 +2,7 @@
 
 namespace Modules\Vacation\App\Models;
 
+use App\Enums\Status;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,4 +27,8 @@ class Vacation extends Model
         return verta($this->end_date)->format('Y/m/d');
     }
 
+    public function status()
+    {
+        return Status::getLabel($this->status);
+    }
 }
