@@ -32,7 +32,7 @@
                             @foreach($employees as $employee)
                                 <tr>
                                     <td>{{$employee->id}}</td>
-                                    <td>{{$employee->id}}</td>
+                                    <td>{{$employee->employeeRequest->full_name}}</td>
                                     <td>{{$employee->id_code}}</td>
                                     <td>{{$employee->start_contract_jalali}}</td>
                                     <td>{{$employee->end_contract_jalali}}</td>

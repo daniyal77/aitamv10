@@ -29,7 +29,7 @@ class EmployeeController extends Controller
      */
     public function index(): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        $employees = $this->employeeService->paginate();
+        $employees = $this->employeeService->paginateWithRelational('employeeRequest');
         return view('employee::list', compact('employees'));
     }
 

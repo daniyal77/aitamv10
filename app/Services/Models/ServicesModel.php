@@ -41,6 +41,17 @@ abstract class ServicesModel
      *
      * @return mixed
      */
+    public function paginateWithRelational($relations , $perPage = 15, $columns = array('*'))
+    {
+        return $this->modelClass()->with($relations)->paginate($perPage, $columns);
+    }
+
+    /**
+     * @param int $perPage
+     * @param array $columns
+     *
+     * @return mixed
+     */
     public function trash($perPage = 15, $columns = array('*'))
     {
         return $this->modelClass()->onlyTrashed()->paginate($perPage, $columns);

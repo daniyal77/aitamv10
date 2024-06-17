@@ -14,10 +14,10 @@
                                         <span class="text-danger">*</span>
                                     </label>
                                     <select class="form-control" name="personal_id" id="personal_id">
+                                        <option value="">لطفا انتخاب نمایید</option>
                                         @foreach($dataReconcilement['employee'] as $employee)
                                             <option value="{{$employee->id}}">{{$employee->full_name}}</option>
                                         @endforeach
-
                                     </select>
                                 </div>
                             </div>
@@ -159,8 +159,8 @@
                                 <div class="form-group ">
                                     <label for="overestimate">ضریب محاصبه اضافه کاری<span
                                             class="text-danger">*</span></label>
-                                    <input id="overestimate" class="form-control"
-                                           name="overestimate" maxlength="255" required="required" value="1">
+                                    <input id="overestimate" class="form-control" type="number"
+                                           name="overestimate" max="100" required="required" value="1">
 
                                 </div>
                             </div>

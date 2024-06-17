@@ -31,8 +31,14 @@ class Employee extends Model
     {
         return $this->is_pay_slip ? 'بلی' : 'خیر';
     }
+
     public function is_marriage()
     {
         return $this->is_marriage ? 'متاهل' : 'مجرد';
+    }
+
+    public function employeeRequest()
+    {
+        return $this->belongsTo(EmployeeRequest::class,'personal_id');
     }
 }
