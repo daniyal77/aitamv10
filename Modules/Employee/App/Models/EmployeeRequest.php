@@ -13,8 +13,7 @@ class EmployeeRequest extends Model
      * The attributes that are mass assignable.
      */
     protected $fillable = ['name', 'last_name', 'skils', 'file_resume', 'status'];
-    protected $casts = [
-        'skils' => 'array',
-    ];
+    protected $casts = ['skils' => 'array'];
+
 
 }

@@ -2,9 +2,15 @@
 
 namespace Modules\Employee\App\Http\Controllers;
 
+use App\Enums\Setting;
 use App\Http\Controllers\Controller;
+use Exception;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Modules\Employee\App\Services\EmployeeRequestService;
 
 class EmployeeRequestController extends Controller
@@ -20,7 +26,7 @@ class EmployeeRequestController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Factory|\Illuminate\Foundation\Application|View|Application
     {
         $employeeRequest = $this->employeeRequestService->paginate();
         return view('employee::request.list', compact('employeeRequest'));
@@ -29,9 +35,11 @@ class EmployeeRequestController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('employee::create');
+        $skills = explode(',', Setting::get(Setting::SKILS, []));
+
+        return view('employee::request.create', compact('skills'));
     }
 
     /**
@@ -39,15 +47,18 @@ class EmployeeRequestController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //
-    }
-
-    /**
-     * Show the specified resource.
-     */
-    public function show($id)
-    {
-        return view('employee::show');
+        try {
+            $this->employeeRequestService->createEmployee(
+                name       : $request->name,
+                last_name  : $request->last_name,
+                skils      : $request->skils,
+                file_resume: $request->file('file_resume')
+            );
+            return redirect()->route('employee.request.index')->with('suc', 'درخواست کارمند جدید باموفقیت ذخیره شد');
+        } catch (Exception $e) {
+            Log::error($e->getMessage() . " :: " . $e->getLine());
+            return redirect()->route('employee.request.index')->with('err', 'خطلا در ثبت اطلاعات');
+        }
     }
 
     /**
@@ -71,6 +82,6 @@ class EmployeeRequestController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //موقع حذف فایل رزومه هم پاک شود
     }
 }

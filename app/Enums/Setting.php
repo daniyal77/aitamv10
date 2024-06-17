@@ -19,6 +19,7 @@ class Setting extends Enum
 
     const  SMS_MELI_PAYAMAK_USER_NAME = 'SMS_MELI_PAYAMAK_USER_NAME';
     const  SMS_MELI_PAYAMAK_PASSWORD = 'SMS_MELI_PAYAMAK_PASSWORD';
+    const  SKILS = 'SKILS';
 
     static function get($type, $default = '')
     {
