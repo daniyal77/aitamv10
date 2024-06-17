@@ -14,7 +14,11 @@
                                     <label for="employee_id">نام پرسنل
                                         <span class="text-danger">*</span></label>
                                     <select name="employee_id" class="form-control" id="employee_id">
-                                        <option value="1">1</option>
+                                        <option value="">لطفا انتخاب نمایید</option>
+                                        @foreach($employees as $employee)
+                                            <option
+                                                value="{{$employee->id}}">{{@$employee->employeeRequest->full_name}}</option>
+                                        @endforeach
                                     </select>
 
                                 </div>

@@ -33,7 +33,8 @@ class VacationController extends Controller
      */
     public function create()
     {
-        return view('vacation::create');
+        $employees = $this->vacationService->showEmployee();
+        return view('vacation::create', compact('employees'));
     }
 
     /**
@@ -44,7 +45,6 @@ class VacationController extends Controller
         $this->vacationService->createVacation($request->all());
         return redirect()->route('vacation.index')->with('suc', 'مرخصی باموفقیت ذخیره شد');
     }
-
 
 
     /**
