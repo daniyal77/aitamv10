@@ -188,11 +188,30 @@ abstract class ServicesModel
         return $this;
     }
 
+    /**
+     * @param       $attribute
+     * @param       $value
+     * @param array $columns
+     *
+     */
+    public function where($whereArray = [], $setModel = false, $cols = '*')
+    {
+        $model = $this->modelClass()->where($whereArray)->get($cols);
+
+        if ($setModel) {
+            $this->model = $model;
+            return $this;
+        }
+        return $model;
+    }
+
+
     public function setModel($model)
     {
         $this->model = $model;
         return $this;
     }
+
 
 }
 

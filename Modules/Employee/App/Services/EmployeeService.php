@@ -4,6 +4,7 @@ namespace Modules\Employee\App\Services;
 
 use App\Services\Models\ServiceModel;
 use Modules\Employee\App\Enums\ContractType;
+use Modules\Employee\App\Enums\EmployeeRequestStatus;
 use Modules\Employee\App\Enums\EndOfService;
 use Modules\Employee\App\Models\Employee;
 use Modules\Employee\App\Services\traits\Employee\EmployeeCache;
@@ -27,6 +28,7 @@ class EmployeeService extends ServiceModel
         return [
             'endOfServices' => EndOfService::optionList(),
             'contactTypes'  => ContractType::optionList(),
+            'employee'      => (new EmployeeRequestService())->where(['status' => EmployeeRequestStatus::ACCEPTED]),
         ];
     }
 

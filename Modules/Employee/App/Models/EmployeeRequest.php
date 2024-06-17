@@ -15,5 +15,9 @@ class EmployeeRequest extends Model
     protected $fillable = ['name', 'last_name', 'skils', 'file_resume', 'status'];
     protected $casts = ['skils' => 'array'];
 
+    public function getFullNameAttribute()
+    {
+        return $this->name . " " . $this->last_name;
+    }
 
 }

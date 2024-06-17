@@ -4889,3 +4889,639 @@
 #69 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
 #70 {main}
 "} 
+[2024-06-17 13:09:07] local.ERROR: Attempt to read property "id" on bool {"view":{"view":"D:\\WorkSpace\\aitamv10\\Modules\\Employee\\resources\\views\\create.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-572717422 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1701</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-572717422\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__sentry_tracing_view_name":"<pre class=sf-dump id=sf-dump-661942636 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">employee::create</span>\"
+</pre><script>Sfdump(\"sf-dump-661942636\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","dataReconcilement":"<pre class=sf-dump id=sf-dump-133505373 data-indent-pad=\"  \"><span class=sf-dump-note>array:3</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>endOfServices</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-const>null</span>
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"11 characters\">&#1575;&#1606;&#1578;&#1582;&#1575;&#1576; &#1705;&#1606;&#1740;&#1583;</span>\"
+    </samp>]
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"3 characters\">YES</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"3 characters\">&#1576;&#1604;&#1740;</span>\"
+    </samp>]
+    <span class=sf-dump-index>2</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"2 characters\">NO</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"3 characters\">&#1582;&#1740;&#1585;</span>\"
+    </samp>]
+    <span class=sf-dump-index>3</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"5 characters\">WOMEN</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"4 characters\">&#1582;&#1575;&#1606;&#1605;</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>contactTypes</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-const>null</span>
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"11 characters\">&#1575;&#1606;&#1578;&#1582;&#1575;&#1576; &#1705;&#1606;&#1740;&#1583;</span>\"
+    </samp>]
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"12 characters\">daily_worker</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"7 characters\">&#1585;&#1608;&#1586; &#1605;&#1586;&#1583;</span>\"
+    </samp>]
+    <span class=sf-dump-index>2</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">temporary</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"4 characters\">&#1605;&#1608;&#1602;&#1578;</span>\"
+    </samp>]
+    <span class=sf-dump-index>3</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"5 characters\">human</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1605;&#1585;&#1583;&#1605;&#1740;</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>employee</span>\" => <span class=sf-dump-note title=\"Modules\\Employee\\App\\Models\\EmployeeRequest
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Modules\\Employee\\App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>EmployeeRequest</span> {<a class=sf-dump-ref>#1736</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"17 characters\">employee_requests</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+    +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+    #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+    +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+    +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+    +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+      \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1583;&#1575;&#1606;&#1740;&#1575;&#1604;</span>\"
+      \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1575;&#1605;&#1740;&#1585;&#1740;</span>\"
+      \"<span class=sf-dump-key>skils</span>\" => \"<span class=sf-dump-str title=\"7 characters\">[&quot;php&quot;]</span>\"
+      \"<span class=sf-dump-key>file_resume</span>\" => \"<span class=sf-dump-str title=\"82 characters\">D:\\WorkSpace\\aitamv10\\public/upload/file_resume//9121718628520resume-daniyalv2.pdf</span>\"
+      \"<span class=sf-dump-key>status</span>\" => \"<span class=sf-dump-str title=\"7 characters\">PENDING</span>\"
+      \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+      \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+      \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1583;&#1575;&#1606;&#1740;&#1575;&#1604;</span>\"
+      \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1575;&#1605;&#1740;&#1585;&#1740;</span>\"
+      \"<span class=sf-dump-key>skils</span>\" => \"<span class=sf-dump-str title=\"7 characters\">[&quot;php&quot;]</span>\"
+      \"<span class=sf-dump-key>file_resume</span>\" => \"<span class=sf-dump-str title=\"82 characters\">D:\\WorkSpace\\aitamv10\\public/upload/file_resume//9121718628520resume-daniyalv2.pdf</span>\"
+      \"<span class=sf-dump-key>status</span>\" => \"<span class=sf-dump-str title=\"7 characters\">PENDING</span>\"
+      \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+      \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>skils</span>\" => \"<span class=sf-dump-str title=\"5 characters\">array</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+    +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+    +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:5</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">name</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"9 characters\">last_name</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"5 characters\">skils</span>\"
+      <span class=sf-dump-index>3</span> => \"<span class=sf-dump-str title=\"11 characters\">file_resume</span>\"
+      <span class=sf-dump-index>4</span> => \"<span class=sf-dump-str title=\"6 characters\">status</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+    </samp>]
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-133505373\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Attempt to read property \"id\" on bool at D:\\WorkSpace\\aitamv10\\Modules\\Employee\\resources\\views\\create.blade.php:18)
+[stacktrace]
+#0 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#1 D:\\WorkSpace\\aitamv10\\Modules\\Employee\\resources\\views\\create.blade.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#2 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\WorkSpace\\\\ai...')
+#3 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\WorkSpace\\\\ai...', Array)
+#5 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\WorkSpace\\\\ai...', Array)
+#6 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\ViewEngineDecorator.php(45): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\WorkSpace\\\\ai...', Array)
+#7 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Sentry\\Laravel\\Tracing\\ViewEngineDecorator->get('D:\\\\WorkSpace\\\\ai...', Array)
+#8 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#9 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#10 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#24 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\FlushEventsMiddleware.php(13): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\FlushEventsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestIpMiddleware.php(45): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestIpMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestMiddleware.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\WorkSpace\\aitamv10\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Middleware.php(97): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Tracing\\Middleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 D:\\WorkSpace\\aitamv10\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
+#65 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Attempt to read property \"id\" on bool at D:\\WorkSpace\\aitamv10\\storage\\framework\\views\\5aa2a1b68f553a2807a67eb7863a0594.php:18)
+[stacktrace]
+#0 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#1 D:\\WorkSpace\\aitamv10\\storage\\framework\\views\\5aa2a1b68f553a2807a67eb7863a0594.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#2 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\WorkSpace\\\\ai...')
+#3 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\WorkSpace\\\\ai...', Array)
+#5 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\WorkSpace\\\\ai...', Array)
+#6 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\ViewEngineDecorator.php(45): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\WorkSpace\\\\ai...', Array)
+#7 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Sentry\\Laravel\\Tracing\\ViewEngineDecorator->get('D:\\\\WorkSpace\\\\ai...', Array)
+#8 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#9 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#10 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#24 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\FlushEventsMiddleware.php(13): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\FlushEventsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestIpMiddleware.php(45): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestIpMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestMiddleware.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\WorkSpace\\aitamv10\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Middleware.php(97): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Tracing\\Middleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 D:\\WorkSpace\\aitamv10\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
+#65 {main}
+"} 
+[2024-06-17 13:09:15] local.ERROR: Attempt to read property "id" on bool {"view":{"view":"D:\\WorkSpace\\aitamv10\\Modules\\Employee\\resources\\views\\create.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-710225955 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1701</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-710225955\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__sentry_tracing_view_name":"<pre class=sf-dump id=sf-dump-745582990 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">employee::create</span>\"
+</pre><script>Sfdump(\"sf-dump-745582990\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","dataReconcilement":"<pre class=sf-dump id=sf-dump-510874639 data-indent-pad=\"  \"><span class=sf-dump-note>array:3</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>endOfServices</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-const>null</span>
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"11 characters\">&#1575;&#1606;&#1578;&#1582;&#1575;&#1576; &#1705;&#1606;&#1740;&#1583;</span>\"
+    </samp>]
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"3 characters\">YES</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"3 characters\">&#1576;&#1604;&#1740;</span>\"
+    </samp>]
+    <span class=sf-dump-index>2</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"2 characters\">NO</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"3 characters\">&#1582;&#1740;&#1585;</span>\"
+    </samp>]
+    <span class=sf-dump-index>3</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"5 characters\">WOMEN</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"4 characters\">&#1582;&#1575;&#1606;&#1605;</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>contactTypes</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-const>null</span>
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"11 characters\">&#1575;&#1606;&#1578;&#1582;&#1575;&#1576; &#1705;&#1606;&#1740;&#1583;</span>\"
+    </samp>]
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"12 characters\">daily_worker</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"7 characters\">&#1585;&#1608;&#1586; &#1605;&#1586;&#1583;</span>\"
+    </samp>]
+    <span class=sf-dump-index>2</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">temporary</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"4 characters\">&#1605;&#1608;&#1602;&#1578;</span>\"
+    </samp>]
+    <span class=sf-dump-index>3</span> => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => \"<span class=sf-dump-str title=\"5 characters\">human</span>\"
+      \"<span class=sf-dump-key>value</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1605;&#1585;&#1583;&#1605;&#1740;</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>employee</span>\" => <span class=sf-dump-note title=\"Modules\\Employee\\App\\Models\\EmployeeRequest
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Modules\\Employee\\App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>EmployeeRequest</span> {<a class=sf-dump-ref>#1736</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"17 characters\">employee_requests</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+    +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+    #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+    +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+    +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+    +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+      \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1583;&#1575;&#1606;&#1740;&#1575;&#1604;</span>\"
+      \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1575;&#1605;&#1740;&#1585;&#1740;</span>\"
+      \"<span class=sf-dump-key>skils</span>\" => \"<span class=sf-dump-str title=\"7 characters\">[&quot;php&quot;]</span>\"
+      \"<span class=sf-dump-key>file_resume</span>\" => \"<span class=sf-dump-str title=\"82 characters\">D:\\WorkSpace\\aitamv10\\public/upload/file_resume//9121718628520resume-daniyalv2.pdf</span>\"
+      \"<span class=sf-dump-key>status</span>\" => \"<span class=sf-dump-str title=\"7 characters\">PENDING</span>\"
+      \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+      \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+      \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1583;&#1575;&#1606;&#1740;&#1575;&#1604;</span>\"
+      \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1575;&#1605;&#1740;&#1585;&#1740;</span>\"
+      \"<span class=sf-dump-key>skils</span>\" => \"<span class=sf-dump-str title=\"7 characters\">[&quot;php&quot;]</span>\"
+      \"<span class=sf-dump-key>file_resume</span>\" => \"<span class=sf-dump-str title=\"82 characters\">D:\\WorkSpace\\aitamv10\\public/upload/file_resume//9121718628520resume-daniyalv2.pdf</span>\"
+      \"<span class=sf-dump-key>status</span>\" => \"<span class=sf-dump-str title=\"7 characters\">PENDING</span>\"
+      \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+      \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2024-06-17 12:48:40</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>skils</span>\" => \"<span class=sf-dump-str title=\"5 characters\">array</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+    +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+    +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:5</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">name</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"9 characters\">last_name</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"5 characters\">skils</span>\"
+      <span class=sf-dump-index>3</span> => \"<span class=sf-dump-str title=\"11 characters\">file_resume</span>\"
+      <span class=sf-dump-index>4</span> => \"<span class=sf-dump-str title=\"6 characters\">status</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+    </samp>]
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-510874639\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Attempt to read property \"id\" on bool at D:\\WorkSpace\\aitamv10\\Modules\\Employee\\resources\\views\\create.blade.php:18)
+[stacktrace]
+#0 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#1 D:\\WorkSpace\\aitamv10\\Modules\\Employee\\resources\\views\\create.blade.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#2 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\WorkSpace\\\\ai...')
+#3 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\WorkSpace\\\\ai...', Array)
+#5 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\WorkSpace\\\\ai...', Array)
+#6 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\ViewEngineDecorator.php(45): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\WorkSpace\\\\ai...', Array)
+#7 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Sentry\\Laravel\\Tracing\\ViewEngineDecorator->get('D:\\\\WorkSpace\\\\ai...', Array)
+#8 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#9 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#10 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#24 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\FlushEventsMiddleware.php(13): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\FlushEventsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestIpMiddleware.php(45): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestIpMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestMiddleware.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\WorkSpace\\aitamv10\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Middleware.php(97): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Tracing\\Middleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 D:\\WorkSpace\\aitamv10\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
+#65 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Attempt to read property \"id\" on bool at D:\\WorkSpace\\aitamv10\\storage\\framework\\views\\5aa2a1b68f553a2807a67eb7863a0594.php:18)
+[stacktrace]
+#0 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#1 D:\\WorkSpace\\aitamv10\\storage\\framework\\views\\5aa2a1b68f553a2807a67eb7863a0594.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\WorkSpace\\\\ai...', 18)
+#2 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\WorkSpace\\\\ai...')
+#3 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\WorkSpace\\\\ai...', Array)
+#5 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\WorkSpace\\\\ai...', Array)
+#6 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\ViewEngineDecorator.php(45): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\WorkSpace\\\\ai...', Array)
+#7 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Sentry\\Laravel\\Tracing\\ViewEngineDecorator->get('D:\\\\WorkSpace\\\\ai...', Array)
+#8 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#9 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#10 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#24 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\FlushEventsMiddleware.php(13): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\FlushEventsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestIpMiddleware.php(45): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestIpMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestMiddleware.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\WorkSpace\\aitamv10\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Middleware.php(97): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Tracing\\Middleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 D:\\WorkSpace\\aitamv10\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
+#65 {main}
+"} 
+[2024-06-17 13:13:36] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '0' in 'where clause' (Connection: mysql, SQL: select * from `employee_requests` where (`0` = status and `1` = PENDING)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column '0' in 'where clause' (Connection: mysql, SQL: select * from `employee_requests` where (`0` = status and `1` = PENDING)) at D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(414): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2871): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2860): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3414): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2859): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(739): Illuminate\\Database\\Query\\Builder->get('*')
+#7 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(723): Illuminate\\Database\\Eloquent\\Builder->getModels('*')
+#8 D:\\WorkSpace\\aitamv10\\app\\Services\\Models\\ServicesModel.php(199): Illuminate\\Database\\Eloquent\\Builder->get('*')
+#9 D:\\WorkSpace\\aitamv10\\Modules\\Employee\\App\\Services\\EmployeeService.php(31): App\\Services\\Models\\ServicesModel->where(Array)
+#10 D:\\WorkSpace\\aitamv10\\Modules\\Employee\\App\\Http\\Controllers\\EmployeeController.php(50): Modules\\Employee\\App\\Services\\EmployeeService->dataReconcilement()
+#11 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Modules\\Employee\\App\\Http\\Controllers\\EmployeeController->create()
+#12 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('create', Array)
+#13 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing.php(21): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Modules\\Employee\\App\\Http\\Controllers\\EmployeeController), 'create')
+#14 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Routing\\TracingRoutingDispatcher.php(31): Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing->Sentry\\Laravel\\Tracing\\Routing\\{closure}()
+#15 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing.php(20): Sentry\\Laravel\\Tracing\\Routing\\TracingRoutingDispatcher->wrapRouteDispatch(Object(Closure), Object(Illuminate\\Routing\\Route))
+#16 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing->dispatch(Object(Illuminate\\Routing\\Route), Object(Modules\\Employee\\App\\Http\\Controllers\\EmployeeController), 'create')
+#17 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#18 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#19 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\FlushEventsMiddleware.php(13): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\FlushEventsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestIpMiddleware.php(45): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestIpMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestMiddleware.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\WorkSpace\\aitamv10\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Middleware.php(97): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Tracing\\Middleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#66 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#67 D:\\WorkSpace\\aitamv10\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#68 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
+#69 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column '0' in 'where clause' at D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:423)
+[stacktrace]
+#0 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(423): PDO->prepare('select * from `...')
+#1 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(414): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2871): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2860): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3414): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2859): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(739): Illuminate\\Database\\Query\\Builder->get('*')
+#9 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(723): Illuminate\\Database\\Eloquent\\Builder->getModels('*')
+#10 D:\\WorkSpace\\aitamv10\\app\\Services\\Models\\ServicesModel.php(199): Illuminate\\Database\\Eloquent\\Builder->get('*')
+#11 D:\\WorkSpace\\aitamv10\\Modules\\Employee\\App\\Services\\EmployeeService.php(31): App\\Services\\Models\\ServicesModel->where(Array)
+#12 D:\\WorkSpace\\aitamv10\\Modules\\Employee\\App\\Http\\Controllers\\EmployeeController.php(50): Modules\\Employee\\App\\Services\\EmployeeService->dataReconcilement()
+#13 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Modules\\Employee\\App\\Http\\Controllers\\EmployeeController->create()
+#14 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('create', Array)
+#15 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing.php(21): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Modules\\Employee\\App\\Http\\Controllers\\EmployeeController), 'create')
+#16 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Routing\\TracingRoutingDispatcher.php(31): Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing->Sentry\\Laravel\\Tracing\\Routing\\{closure}()
+#17 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing.php(20): Sentry\\Laravel\\Tracing\\Routing\\TracingRoutingDispatcher->wrapRouteDispatch(Object(Closure), Object(Illuminate\\Routing\\Route))
+#18 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Sentry\\Laravel\\Tracing\\Routing\\TracingControllerDispatcherTracing->dispatch(Object(Illuminate\\Routing\\Route), Object(Modules\\Employee\\App\\Http\\Controllers\\EmployeeController), 'create')
+#19 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#20 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#21 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#30 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#38 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#39 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#40 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#41 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\FlushEventsMiddleware.php(13): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\FlushEventsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestIpMiddleware.php(45): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestIpMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Http\\SetRequestMiddleware.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Http\\SetRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\WorkSpace\\aitamv10\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 D:\\WorkSpace\\aitamv10\\vendor\\sentry\\sentry-laravel\\src\\Sentry\\Laravel\\Tracing\\Middleware.php(97): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Sentry\\Laravel\\Tracing\\Middleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#69 D:\\WorkSpace\\aitamv10\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#70 D:\\WorkSpace\\aitamv10\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\WorkSpace\\\\ai...')
+#71 {main}
+"} 

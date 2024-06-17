@@ -14,7 +14,10 @@
                                         <span class="text-danger">*</span>
                                     </label>
                                     <select class="form-control" name="personal_id" id="personal_id">
-                                        <option value="1">1</option>
+                                        @foreach($dataReconcilement['employee'] as $employee)
+                                            <option value="{{$employee->id}}">{{$employee->full_name}}</option>
+                                        @endforeach
+
                                     </select>
                                 </div>
                             </div>
