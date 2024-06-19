@@ -73,7 +73,7 @@
             $('#start_date').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#start_date_real',
-                initialValue: false,
+                initialValue: true,
                 observer: true,
                 altFormat: 'X',
                 autoClose: true
@@ -81,7 +81,7 @@
             $('#end_date').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#end_date_real',
-                initialValue: false,
+                initialValue: true,
                 observer: true,
                 altFormat: 'X',
                 autoClose: true

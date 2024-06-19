@@ -48,8 +48,12 @@ class VacationController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $this->vacationService->createVacation($request->all());
-        return redirect()->route('vacation.index')->with('suc', 'مرخصی باموفقیت ذخیره شد');
+        try {
+            $this->vacationService->createVacation($request->all());
+            return redirect()->route('vacation.index')->with('suc', 'مرخصی باموفقیت ذخیره شد');
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'در ثبت مرخصی خطایی رخ داده است');
+        }
     }
 
 
@@ -58,7 +62,12 @@ class VacationController extends Controller
      */
     public function edit($id)
     {
-        return view('vacation::edit');
+        try {
+            $vacation = $this->vacationService->find(id: $id);;
+            return view('vacation::edit', compact('vacation'));
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+        }
     }
 
     /**

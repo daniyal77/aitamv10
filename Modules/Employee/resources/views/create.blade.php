@@ -277,7 +277,7 @@
             $('#start_contract').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#start_contract_real',
-                initialValue: false,
+                initialValue: true,
                 observer: true,
                 altFormat: 'X',
                 autoClose: true
@@ -285,7 +285,7 @@
             $('#end_contract').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#end_contract_real',
-                initialValue: false,
+                initialValue: true,
                 observer: true,
                 altFormat: 'X',
                 autoClose: true

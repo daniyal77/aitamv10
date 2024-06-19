@@ -6,34 +6,33 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <form id="form_validation" class="form-validate-summernote" method="post"
-                          action="{{ route('vacation.store') }}">
+                          action="{{ route('vacation.update',$vacation->id) }}">
                         @csrf
+                        @method('PUT')
                         <div class="row row-sm">
                             <div class="col-lg-4 col-md-3 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="employee_id">نام پرسنل
-                                        <span class="text-danger">*</span></label>
-                                    <select name="employee_id" class="form-control" id="employee_id">
-                                        <option value="1">1</option>
-                                    </select>
-
+                                    <label for="employee_id">نام پرسنل</label>
+                                    <p>{{@$vacation->employee->employeeRequest->full_name}}</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="start_date"> تاریخ شروع</label>
-                                    <input type="hidden" name="start_date" id="start_date_real" readonly="readonly">
+                                    <input type="hidden" value="{{strtotime($vacation->start_date)}}" name="start_date"
+                                           id="start_date_real" readonly="readonly">
                                     <input required="required" data-msg="الزامی میباشد" id="start_date" readonly=""
+                                           value="{{verta($vacation->start_date) ?? ''}}"
                                            class="form-control pwt-datepicker-input-element">
-
-
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="end_date"> تاریخ پایان</label>
-                                    <input type="hidden" name="end_date" id="end_date_real">
+                                    <input type="hidden" value="{{strtotime($vacation->end_date)}}" name="end_date"
+                                           id="end_date_real">
                                     <input required="required" id="end_date" readonly=""
+                                           value="{{verta($vacation->end_date) ?? ''}}"
                                            class="form-control pwt-datepicker-input-element">
 
                                 </div>
@@ -41,7 +40,8 @@
                             <div class=" col-12">
                                 <div class="form-group">
                                     <label for="intro">توضیحات</label>
-                                    <textarea class="form-control" name="intro" id="intro" rows="5"></textarea>
+                                    <textarea class="form-control" name="intro" id="intro"
+                                              rows="5">{{$vacation->intro}}</textarea>
                                 </div>
                                 <button class="btn ripple d-none btn-primary" id="spinnerBtn" type="button">
                                     <span aria-hidden="true" class="spinner-border spinner-border-sm"
@@ -69,15 +69,17 @@
             $('#start_date').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#start_date_real',
-                initialValue: false,
+                initialValueType: 'persian',
+                initialValue: true,
                 observer: true,
                 altFormat: 'X',
                 autoClose: true
             });
             $('#end_date').persianDatepicker({
                 format: 'YYYY/MM/DD',
+                initialValueType: 'persian',
                 altField: '#end_date_real',
-                initialValue: false,
+                initialValue: true,
                 observer: true,
                 altFormat: 'X',
                 autoClose: true

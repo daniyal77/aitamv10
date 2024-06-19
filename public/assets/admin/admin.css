@@ -14,7 +14,7 @@
         }
 
         .form-control {
-            color: var(--primery_text_color) !important;
+            color: #000 !important;
         }
 
         .btn-success {
