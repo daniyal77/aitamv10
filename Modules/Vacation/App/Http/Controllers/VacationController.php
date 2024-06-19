@@ -14,7 +14,6 @@ use Modules\Vacation\App\Services\VacationService;
 
 class VacationController extends Controller
 {
-    //todo نصب دیباگبار
     //todo استفاده از رابطه
     //todo استفاده از کش
     //todo برای همه ماژول ها به کار ببر
@@ -75,7 +74,17 @@ class VacationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $this->vacationService->updateVacation(
+                id       : $id,
+                startDate: $request->start_date,
+                endDate  : $request->end_date,
+                intro    : $request->intro
+            );
+            return redirect()->route('vacation.index')->with('suc', 'مرخصی با موفقیت ویرایش شد');
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+        }
     }
 
     /**

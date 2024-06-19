@@ -2,6 +2,7 @@
 
 namespace Modules\Vacation\App\Services;
 
+use App\Enums\Status;
 use App\Services\Models\ServiceModel;
 use Modules\Employee\App\Services\EmployeeService;
 use Modules\Vacation\App\Models\Vacation;
@@ -30,6 +31,25 @@ class VacationService extends ServiceModel
     function showEmployee()
     {
         return (new EmployeeService())->all();
+    }
+
+    function updateVacation($id, $startDate, $endDate, $intro)
+    {
+        $vacation = $this->find(id: $id, setModel: true);
+        if ($vacation->getStatus() != Status::PENDING)
+            return "";
+
+        //todo اگه مرخصی تایید یا رد شده بود نشه ویرایش کرد
+        //todo remove when login Auth::user()->id ??
+        $data = [
+            'start_date' => date('Y-m-d', $startDate),
+            'end_date'   => date('Y-m-d', $endDate),
+            'intro'      => $intro,
+            'status'     => Status::PENDING,
+            'user_id'    => 1,
+        ];
+        $this->update(data: $data, id: $id);
+
     }
 
 }
