@@ -2,7 +2,9 @@
 
 namespace Modules\Vacation\App\Http\Controllers;
 
+use App\Enums\Status;
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -62,7 +64,7 @@ class VacationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id): RedirectResponse
+    public function update(Request $request, $id)
     {
         //
     }
@@ -73,5 +75,27 @@ class VacationController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    function checked($vacationId)
+    {
+        try {
+            $this->vacationService->update(data: ['status' => Status::PUBLISH], id: $vacationId);;
+            return redirect()->back()->with('suc', 'با موفقیت تایید شد');
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'در تایید مرخصی خطلایی وجود دارد لطفا دوباره تلاش کید');
+
+        }
+    }
+
+    function unchecked($vacationId)
+    {
+        try {
+            $this->vacationService->update(data: ['status' => Status::DRAFT], id: $vacationId);;
+            return redirect()->back()->with('suc', 'مرخصی رد شد');
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'در رد مرخصی خطلایی وجود دارد لطفا دوباره تلاش کید');
+
+        }
     }
 }

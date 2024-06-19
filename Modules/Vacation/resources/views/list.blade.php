@@ -43,7 +43,7 @@
                                             </a>
                                         @else
                                             <a class="btn btn-sm ml-1 btn-danger" title="عدم تایید"
-                                               href="{{ route('vacation.unchecked',$employee->id) }}">
+                                               href="{{ route('vacation.unchecked',$vacation->id) }}">
                                                 <i class="fas fa-close"></i>
                                             </a>
                                         @endif

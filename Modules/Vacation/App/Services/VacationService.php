@@ -31,4 +31,5 @@ class VacationService extends ServiceModel
     {
         return (new EmployeeService())->all();
     }
+
 }
