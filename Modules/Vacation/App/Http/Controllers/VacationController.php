@@ -5,9 +5,6 @@ namespace Modules\Vacation\App\Http\Controllers;
 use App\Enums\Status;
 use App\Http\Controllers\Controller;
 use Exception;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Modules\Vacation\App\Services\VacationService;
@@ -27,10 +24,14 @@ class VacationController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Factory|\Illuminate\Foundation\Application|View|Application
+    public function index()
     {
-        $vacations = $this->vacationService->all();
-        return view('vacation::list', compact('vacations'));
+        try {
+            $vacations = $this->vacationService->allVacation();
+            return view('vacation::list', compact('vacations'));
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+        }
     }
 
     /**

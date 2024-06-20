@@ -5,7 +5,9 @@ namespace Modules\Vacation\App\Models;
 use App\Enums\Status;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Employee\App\Models\Employee;
+use Modules\Vacation\App\Services\VacationService;
 
 class Vacation extends Model
 {
@@ -33,8 +35,27 @@ class Vacation extends Model
         return Status::getLabel($this->status);
     }
 
-    public function employee()
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('orderByIdDesc', function ($builder) {
+            $builder->orderBy('id', 'desc');
+        });
+
+        self::created(function ($model) {
+            (new VacationService())->removeCacheVacation();
+        });
+        self::updated(function ($model) {
+            (new VacationService())->removeCacheVacation();
+        });
+        self::deleted(function ($model) {
+            (new VacationService())->removeCacheVacation();
+        });
     }
 }

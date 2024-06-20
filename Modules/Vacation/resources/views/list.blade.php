@@ -21,7 +21,7 @@
                             <tbody>
                             @foreach($vacations as $key=>$vacation)
                                 <tr>
-                                    <td>{{++$key}}</td>
+                                    <td>{{$vacation->id}}</td>
                                     <td>{{@$vacation->employee->employeeRequest->full_name}}</td>
                                     <td>{{$vacation->start_date_jalali}}</td>
                                     <td>{{$vacation->end_date_jalali}}</td>
@@ -50,6 +50,7 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            {{$vacations->links()}}
                             </tbody>
                         </table>
                     </div>

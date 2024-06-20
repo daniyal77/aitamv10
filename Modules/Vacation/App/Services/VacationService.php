@@ -4,6 +4,7 @@ namespace Modules\Vacation\App\Services;
 
 use App\Enums\Status;
 use App\Services\Models\ServiceModel;
+use Illuminate\Support\Facades\Cache;
 use Modules\Employee\App\Services\EmployeeService;
 use Modules\Vacation\App\Models\Vacation;
 use Modules\Vacation\App\Services\traits\Vacation\VacationCache;
@@ -17,6 +18,14 @@ class VacationService extends ServiceModel
     function modelClass(): Vacation
     {
         return new Vacation();
+    }
+
+    function allVacation()
+    {
+        return Cache::remember($this->cacheVacation(), 360, function () {
+            return $this->paginateWithRelational(['employee', 'employee.employeeRequest']);
+        });
+
     }
 
     function createVacation($data)
