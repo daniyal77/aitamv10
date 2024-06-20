@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Cache;
 trait CalendarCache
 {
 
-    public function CacheCalendarList()
+    public function CacheCalendarList(): string
     {
         //todo refactor when auth
         //Auth::user()->RoleId

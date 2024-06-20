@@ -34,7 +34,7 @@
             var row = aa[k]
             events.push({
                 id: row.id,
-                title: row.name,
+                title: row.event,
                 start: row.date
             });
         });

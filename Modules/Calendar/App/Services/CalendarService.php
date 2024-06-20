@@ -20,7 +20,7 @@ class CalendarService extends ServiceModel
 
     public function showEventInUserOrRoleId($userId, $roleId)
     {
-        return Cache::remember('calendars' . $userId, config('setting.cash_expire'),
+        return Cache::remember($this->CacheCalendarList(), 360,
             function () use ($userId, $roleId) {
                 return $this->modelClass()->where('user_id', $userId)
                     ->orWhere('role_id', $roleId)
