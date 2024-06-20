@@ -37,10 +37,10 @@
                                                href="{{ route('vacation.edit',$vacation->id) }}">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"
-                                               href="{{ route('vacation.destroy',$vacation->id) }}">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
+                                            {{--                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"--}}
+                                            {{--                                               href="{{ route('vacation.destroy',$vacation->id) }}">--}}
+                                            {{--                                                <i class="fas fa-trash"></i>--}}
+                                            {{--                                            </a>--}}
                                         @else
                                             <a class="btn btn-sm ml-1 btn-danger" title="عدم تایید"
                                                href="{{ route('vacation.unchecked',$vacation->id) }}">

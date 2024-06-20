@@ -25,7 +25,6 @@ class VacationService extends ServiceModel
         return Cache::remember($this->cacheVacation(), 360, function () {
             return $this->paginateWithRelational(['employee', 'employee.employeeRequest']);
         });
-
     }
 
     function createVacation($data)
@@ -35,6 +34,7 @@ class VacationService extends ServiceModel
         //todo remove when login Auth::user()->id ??
         $data['user_id'] = 1;
         $this->create($data);
+        (new VacationService())->removeCacheVacation();
     }
 
     function showEmployee()
@@ -58,6 +58,7 @@ class VacationService extends ServiceModel
             'user_id'    => 1,
         ];
         $this->update(data: $data, id: $id);
+        (new VacationService())->removeCacheVacation();
 
     }
 

@@ -99,7 +99,8 @@ class VacationController extends Controller
     function checked($vacationId)
     {
         try {
-            $this->vacationService->update(data: ['status' => Status::PUBLISH], id: $vacationId);;
+            $this->vacationService->update(data: ['status' => Status::PUBLISH], id: $vacationId);
+            (new VacationService())->removeCacheVacation();
             return redirect()->back()->with('suc', 'با موفقیت تایید شد');
         } catch (Exception $e) {
             return redirect()->back()->with('err', 'در تایید مرخصی خطلایی وجود دارد لطفا دوباره تلاش کید');
@@ -110,7 +111,8 @@ class VacationController extends Controller
     function unchecked($vacationId)
     {
         try {
-            $this->vacationService->update(data: ['status' => Status::DRAFT], id: $vacationId);;
+            $this->vacationService->update(data: ['status' => Status::DRAFT], id: $vacationId);
+            (new VacationService())->removeCacheVacation();
             return redirect()->back()->with('suc', 'مرخصی رد شد');
         } catch (Exception $e) {
             return redirect()->back()->with('err', 'در رد مرخصی خطلایی وجود دارد لطفا دوباره تلاش کید');

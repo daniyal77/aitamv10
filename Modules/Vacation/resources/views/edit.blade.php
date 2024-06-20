@@ -22,7 +22,7 @@
                                     <input type="hidden" value="{{strtotime($vacation->start_date)}}" name="start_date"
                                            id="start_date_real" readonly="readonly">
                                     <input required="required" data-msg="الزامی میباشد" id="start_date" readonly=""
-                                           value="{{verta($vacation->start_date) ?? ''}}"
+                                           value="{{verta($vacation->start_date)->format('Y-m-d') ?? ''}}"
                                            class="form-control pwt-datepicker-input-element">
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                                     <input type="hidden" value="{{strtotime($vacation->end_date)}}" name="end_date"
                                            id="end_date_real">
                                     <input required="required" id="end_date" readonly=""
-                                           value="{{verta($vacation->end_date) ?? ''}}"
+                                           value="{{verta($vacation->end_date)->format('Y-m-d') ?? ''}}"
                                            class="form-control pwt-datepicker-input-element">
 
                                 </div>

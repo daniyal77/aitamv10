@@ -43,15 +43,13 @@ class Vacation extends Model
     public static function boot()
     {
         parent::boot();
-
         static::addGlobalScope('orderByIdDesc', function ($builder) {
             $builder->orderBy('id', 'desc');
         });
-
         self::created(function ($model) {
             (new VacationService())->removeCacheVacation();
         });
-        self::updated(function ($model) {
+        self::updating(function ($model) {
             (new VacationService())->removeCacheVacation();
         });
         self::deleted(function ($model) {
