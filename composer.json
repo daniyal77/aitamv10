@@ -21,6 +21,7 @@
         "melipayamak/php": "1.0.0",
         "myclabs/php-enum": "^1.8",
         "nwidart/laravel-modules": "^10.0",
+        "opcodesio/log-viewer": "^3.10",
         "sentry/sentry-laravel": "^4.4",
         "unisharp/laravel-settings": "^2.0"
     },
