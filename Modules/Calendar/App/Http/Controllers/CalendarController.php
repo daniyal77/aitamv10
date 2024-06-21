@@ -54,4 +54,9 @@ class CalendarController extends Controller
         );
         return true;
     }
+
+    public function destroy()
+    {
+        
+    }
 }

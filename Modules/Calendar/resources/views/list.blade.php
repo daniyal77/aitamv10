@@ -59,6 +59,25 @@
                         showCancelButton: false,
                         confirmButtonText: 'خب',
 
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            let url = "{{ route('calendar.store') }}"
+                            $.ajax({
+                                url: url,
+                                type: "POST",
+                                data: {
+                                    "_token": "{{ csrf_token() }}",
+                                    "start_date": event.start.startStr,
+                                    "desc": result.value
+                                },
+                                success: function () {
+                                    location.reload()
+                                },
+                                error: function (xhr, ajaxOptions, thrownError) {
+
+                                }
+                            });
+                        }
                     })
                 },
 
