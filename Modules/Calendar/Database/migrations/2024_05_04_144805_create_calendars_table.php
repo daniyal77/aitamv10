@@ -14,11 +14,11 @@ return new class extends Migration {
             $table->id();
             $table->text('event');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('role_id');
+            $table->unsignedInteger('role_id')->nullable();
             $table->date('date');
             $table->softDeletes();
 
-            //todo remove soft delete after 6 mounth
+            //todo remove soft delete after 6 month
             $table->timestamps();
         });
     }

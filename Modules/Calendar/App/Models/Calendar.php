@@ -4,10 +4,12 @@ namespace Modules\Calendar\App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Calendar\App\Services\CalendarService;
 
 class Calendar extends Model
 {
+    use SoftDeletes;
 
     protected $fillable = ['event', 'user_id', 'role_id', 'date', 'is_holiday'];
 

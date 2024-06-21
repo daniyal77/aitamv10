@@ -5,6 +5,7 @@ namespace Modules\Calendar\App\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Calendar\App\Jobs\DeleteEventAfterTwoYearJob;
 use Modules\Calendar\App\Jobs\getHolidayJob;
 use Modules\Calendar\App\Services\CalendarService;
 
@@ -24,11 +25,6 @@ class CalendarController extends Controller
      */
     public function index()
     {
-
-//        $url = 'https://holidayapi.ir/jalali/1403/02/22';
-//        $display = file_get_contents($url);
-//        dd(json_decode($display));
-
         //todo refactor when auth
 //        $userId = Auth::user()->RoleId;
         $userId = 0;
@@ -62,8 +58,15 @@ class CalendarController extends Controller
 
     }
 
-    public function api()
+    public function api(): void
     {
-        dispatch(new getHolidayJob());
+        dispatch(new getHolidayJob())->onQueue('holiday');
+    }
+
+
+    public function deleteAfterTwoYear(): void
+    {
+        dispatch(new DeleteEventAfterTwoYearJob())->onQueue('event-delete-after-two-year');
+
     }
 }

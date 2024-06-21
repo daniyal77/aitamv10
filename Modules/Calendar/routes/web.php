@@ -14,8 +14,11 @@ use Modules\Calendar\App\Http\Controllers\CalendarController;
 |
 */
 
-Route::get('calendar', [CalendarController::class, 'index'])->name('calendar.index');
-Route::post('calendar', [CalendarController::class, 'index'])->name('calendar.store');
-Route::delete('calendar', [CalendarController::class, 'index'])->name('calendar.destroy');
-Route::get('calendar/api', [CalendarController::class, 'api'])->name('calendar.api');
 
+Route::controller(CalendarController::class)->prefix('calendar')->name('calendar.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::post('/store', 'store')->name('store');
+    Route::delete('/destroy', 'destroy')->name('destroy');
+    Route::get('/api', 'api')->name('api');
+    Route::get('/delete-after-two-year', 'deleteAfterTwoYear')->name('delete.after.year');
+});
