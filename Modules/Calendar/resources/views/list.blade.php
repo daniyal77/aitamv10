@@ -1,5 +1,5 @@
 @extends('base::layouts.master')
-@section('breadcrumb_name','تقویم')
+@section('title','تقویم')
 @push('style')
     <link href='{{ asset('assets/original/css/fullcalendar/main.css') }}' rel='stylesheet'/>
 @endpush
@@ -52,33 +52,34 @@
                 },
                 selectable: true,
                 events: events,
-                eventClick: function (info) {
-                    Swal.fire({
-                        title: info.event.title,
-                        icon: 'info',
-                        showCancelButton: false,
-                        confirmButtonText: 'خب',
+                eventClick: function (event) {
+                    console.log(event.id)
+                    {{--Swal.fire({--}}
+                    {{--    title: info.event.title,--}}
+                    {{--    icon: 'info',--}}
+                    {{--    showCancelButton: false,--}}
+                    {{--    confirmButtonText: 'خب',--}}
 
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            let url = "{{ route('calendar.store') }}"
-                            $.ajax({
-                                url: url,
-                                type: "POST",
-                                data: {
-                                    "_token": "{{ csrf_token() }}",
-                                    "start_date": event.start.startStr,
-                                    "desc": result.value
-                                },
-                                success: function () {
-                                    location.reload()
-                                },
-                                error: function (xhr, ajaxOptions, thrownError) {
+                    {{--}).then((result) => {--}}
+                    {{--    if (result.isConfirmed) {--}}
+                    {{--        let url = "{{ route('calendar.destroy',2) }}"--}}
+                    {{--        $.ajax({--}}
+                    {{--            url: url,--}}
+                    {{--            type: "DELETE",--}}
+                    {{--            data: {--}}
+                    {{--                "_token": "{{ csrf_token() }}",--}}
+                    {{--                "start_date": event.start.startStr,--}}
+                    {{--                "desc": result.value--}}
+                    {{--            },--}}
+                    {{--            success: function () {--}}
+                    {{--                location.reload()--}}
+                    {{--            },--}}
+                    {{--            error: function (xhr, ajaxOptions, thrownError) {--}}
 
-                                }
-                            });
-                        }
-                    })
+                    {{--            }--}}
+                    {{--        });--}}
+                    {{--    }--}}
+                    {{--})--}}
                 },
 
                 select: function (start, end, allDay) {

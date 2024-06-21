@@ -2,7 +2,6 @@
 
 namespace Modules\Calendar\App\Http\Controllers;
 
-use GuzzleHttp\Client;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -44,6 +43,7 @@ class CalendarController extends Controller
      */
     public function store(Request $request): bool
     {
+        //todo رول رو فقط ادمین میتونه ثبت کنه
         $userId = 0;
         $roleId = 0;
         $this->calendarService->addEventInUserOrRoleId(
@@ -55,8 +55,14 @@ class CalendarController extends Controller
         return true;
     }
 
-    public function destroy()
+    public function destroy($eventId)
     {
-        
+        dd($eventId);
+
+    }
+
+    public function api()
+    {
+        $this->calendarService->saveHolidayFromApi();
     }
 }

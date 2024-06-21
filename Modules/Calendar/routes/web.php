@@ -14,5 +14,8 @@ use Modules\Calendar\App\Http\Controllers\CalendarController;
 |
 */
 
-Route::resource('calendar', CalendarController::class)->only('index', 'store','destroy')->names('calendar');
+Route::get('calendar', [CalendarController::class, 'index'])->name('calendar.index');
+Route::post('calendar', [CalendarController::class, 'index'])->name('calendar.store');
+Route::delete('calendar', [CalendarController::class, 'index'])->name('calendar.destroy');
+Route::get('calendar/api', [CalendarController::class, 'api'])->name('calendar.api');
 
