@@ -12,7 +12,6 @@ return new class extends Migration {
     {
         Schema::table('calendars', function (Blueprint $table) {
             $table->boolean('is_holiday')->default(false);
-            $table->string('holiday_name')->nullable();
         });
     }
 
@@ -23,7 +22,6 @@ return new class extends Migration {
     {
         Schema::table('calendars', function (Blueprint $table) {
             $table->dropColumn('is_holiday');
-            $table->dropColumn('holiday_name');
         });
     }
 };

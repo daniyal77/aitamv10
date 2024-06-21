@@ -61,12 +61,20 @@ class CalendarService extends ServiceModel
             if ($response->getStatusCode() == 200) {
                 $data = json_decode($response->getBody(), true);
                 if ($data['is_holiday']) {
-
+                    $this->create(
+                        [
+                            'date'       => $day,
+                            'event'      => $data['events'][0]['description'],
+                            'is_holiday' => 1,
+                            'user_id'    => 0,
+                            'role_id'    => 0
+                        ]
+                    );
                 }
-            } else {
+            }
+            else {
                 echo "Failed to get data from API";
             }
         }
-
     }
 }

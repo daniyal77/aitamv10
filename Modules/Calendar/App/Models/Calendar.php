@@ -4,14 +4,12 @@ namespace Modules\Calendar\App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
 use Modules\Calendar\App\Services\CalendarService;
 
 class Calendar extends Model
 {
 
-    protected $fillable = ['event', 'user_id', 'role_id', 'date'];
+    protected $fillable = ['event', 'user_id', 'role_id', 'date', 'is_holiday'];
 
     public static function boot()
     {

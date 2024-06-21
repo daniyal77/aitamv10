@@ -5,6 +5,7 @@ namespace Modules\Calendar\App\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Calendar\App\Jobs\getHolidayJob;
 use Modules\Calendar\App\Services\CalendarService;
 
 class CalendarController extends Controller
@@ -63,6 +64,6 @@ class CalendarController extends Controller
 
     public function api()
     {
-        $this->calendarService->saveHolidayFromApi();
+        dispatch(new getHolidayJob());
     }
 }
