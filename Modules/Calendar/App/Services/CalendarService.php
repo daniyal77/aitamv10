@@ -6,6 +6,7 @@ use App\Services\Models\ServiceModel;
 use Carbon\CarbonPeriod;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Modules\Calendar\App\Models\Calendar;
 use Modules\Calendar\App\Services\traits\Calendar\CalendarCache;
@@ -23,16 +24,26 @@ class CalendarService extends ServiceModel
 
     public function showEventInUserOrRoleId($userId, $roleId)
     {
-//        return Cache::remember($this->CacheCalendarList(), 360,
-//            function () use ($userId, $roleId) {
-        return $this->modelClass()
+        return Cache::remember(
+            $this->CacheCalendarList(), 360,
+            function () use ($userId, $roleId) {
+                return $this->modelClass()
                     ->where('user_id', $userId)
                     ->orWhere('role_id', $roleId)
-            ->orWhere('is_holiday', true)
+                    ->orWhere('is_holiday', true)
                     ->get()
-                    ->map
-            ->only('event', 'date', 'id');
-//          /  });
+                    ->map(function ($event) {
+                        $color = $event->is_holiday ? '#f70707' : '#3524ff';
+
+                        return [
+                            'event' => $event->event,
+                            'date'  => $event->date,
+                            'id'    => $event->id,
+                            'color' => $color,
+                        ];
+                    });
+            }
+        );
     }
 
     public function addEventInUserOrRoleId($userId, $roleId, $start_date, $desc): void

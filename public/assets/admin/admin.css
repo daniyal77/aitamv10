@@ -1,7 +1,8 @@
-.aitam-border-radius-10{
+.aitam-border-radius-10 {
     border-radius: 10px;
 }
-  p, a, body, div, small, label, span, li, input {
+
+p, a, body, div, small, label, span, li, input {
             font-family: var(--primery_font) !important;
         }
 
@@ -105,7 +106,3 @@
             font-size: 18px;
         }
 
-        .fc-h-event {
-            border: 1px solid var(--primery_color) !important;
-            background-color: var(--primery_color) !important;
-        }

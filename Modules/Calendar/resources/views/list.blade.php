@@ -35,7 +35,8 @@
             events.push({
                 id: row.id,
                 title: row.event,
-                start: row.date
+                start: row.date,
+                color: row.color
             });
         });
         document.addEventListener('DOMContentLoaded', function () {
@@ -50,6 +51,7 @@
                     right: 'dayGridMonth,dayGridWeek,list',
                     center: 'title',
                 },
+
                 selectable: true,
                 events: events,
                 eventClick: function (event) {
