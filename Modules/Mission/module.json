@@ -1,0 +1,11 @@
+{
+    "name": "Mission",
+    "alias": "mission",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mission\\App\\Providers\\MissionServiceProvider"
+    ],
+    "files": []
+}

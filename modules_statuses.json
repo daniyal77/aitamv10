@@ -2,5 +2,6 @@
     "Employee": true,
     "Base": true,
     "Calendar": true,
-    "Vacation": true
+    "Vacation": true,
+    "Mission": true
 }
