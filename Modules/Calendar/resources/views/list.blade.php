@@ -53,33 +53,31 @@
                 selectable: true,
                 events: events,
                 eventClick: function (event) {
-                    console.log(event.id)
-                    {{--Swal.fire({--}}
-                    {{--    title: info.event.title,--}}
-                    {{--    icon: 'info',--}}
-                    {{--    showCancelButton: false,--}}
-                    {{--    confirmButtonText: 'خب',--}}
+                    Swal.fire({
+                        title: event.event._def.title,
+                        icon: 'info',
+                        showCancelButton: false,
+                        confirmButtonText: 'خب',
 
-                    {{--}).then((result) => {--}}
-                    {{--    if (result.isConfirmed) {--}}
-                    {{--        let url = "{{ route('calendar.destroy',2) }}"--}}
-                    {{--        $.ajax({--}}
-                    {{--            url: url,--}}
-                    {{--            type: "DELETE",--}}
-                    {{--            data: {--}}
-                    {{--                "_token": "{{ csrf_token() }}",--}}
-                    {{--                "start_date": event.start.startStr,--}}
-                    {{--                "desc": result.value--}}
-                    {{--            },--}}
-                    {{--            success: function () {--}}
-                    {{--                location.reload()--}}
-                    {{--            },--}}
-                    {{--            error: function (xhr, ajaxOptions, thrownError) {--}}
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            let url = "{{ route('calendar.destroy') }}"
+                            $.ajax({
+                                url: url,
+                                type: "DELETE",
+                                data: {
+                                    "_token": "{{ csrf_token() }}",
+                                    "id": event.event._def.publicId
+                                },
+                                success: function () {
+                                    location.reload()
+                                },
+                                error: function (xhr, ajaxOptions, thrownError) {
 
-                    {{--            }--}}
-                    {{--        });--}}
-                    {{--    }--}}
-                    {{--})--}}
+                                }
+                            });
+                        }
+                    })
                 },
 
                 select: function (start, end, allDay) {
@@ -92,7 +90,6 @@
                 locale: initialLocaleCode,
                 buttonIcons: false, // show the prev/next text
                 navLinks: true, // can click day/week names to navigate views
-                editable: true,
                 selectable: true,
                 dayMaxEvents: true, // allow "more" link when too many events
                 editable: true

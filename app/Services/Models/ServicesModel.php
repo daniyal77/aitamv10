@@ -223,6 +223,9 @@ abstract class ServicesModel
         return $this;
     }
 
-
+    function deleteWithModel()
+    {
+        $this->model->delete();
+    }
 }
 

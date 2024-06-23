@@ -26,12 +26,12 @@ class CalendarService extends ServiceModel
 //        return Cache::remember($this->CacheCalendarList(), 360,
 //            function () use ($userId, $roleId) {
         return $this->modelClass()
-//                    ->where('user_id', $userId)
-//                    ->orWhere('role_id', $roleId)
+                    ->where('user_id', $userId)
+                    ->orWhere('role_id', $roleId)
             ->orWhere('is_holiday', true)
                     ->get()
                     ->map
-                    ->only('event', 'date');
+            ->only('event', 'date', 'id');
 //          /  });
     }
 
@@ -97,5 +97,15 @@ class CalendarService extends ServiceModel
     public function deleteAfterTwoYear(): void
     {
         $this->modelClass()->whereDate('date', '<=', now()->subYear(2))->forceDelete();
+    }
+
+
+    public function deleteEvent($eventId,)
+    {
+        $userId = 0;
+        $event = $this->find($eventId, true);
+        if (!$event->isHoliday() && $event->getUserId() == $userId) {
+            $this->deleteWithModel();
+        }
     }
 }

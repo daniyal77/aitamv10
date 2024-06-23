@@ -2,9 +2,11 @@
 
 namespace Modules\Calendar\App\Http\Controllers;
 
+use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Log;
 use Modules\Calendar\App\Jobs\DeleteEventAfterTwoYearJob;
 use Modules\Calendar\App\Jobs\getHolidayJob;
 use Modules\Calendar\App\Services\CalendarService;
@@ -52,21 +54,32 @@ class CalendarController extends Controller
         return true;
     }
 
-    public function destroy($eventId)
+    public function destroy(Request $request): bool
     {
-        dd($eventId);
-
+        try {
+            $this->calendarService->deleteEvent($request->id);
+            return true;
+        } catch (Exception $e) {
+            Log::error("delete event calendar : " . $e->getMessage());
+            return false;
+        }
     }
 
+    /**
+     * گرفتن رویداد های تاریخ
+     * @return void
+     */
     public function api(): void
     {
         dispatch(new getHolidayJob())->onQueue('holiday');
     }
 
-
+    /**
+     * پاک کردن event هایی که دوسال ازشون گزشته
+     * @return void
+     */
     public function deleteAfterTwoYear(): void
     {
         dispatch(new DeleteEventAfterTwoYearJob())->onQueue('event-delete-after-two-year');
-
     }
 }
