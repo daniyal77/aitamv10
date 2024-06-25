@@ -2,12 +2,14 @@
 
 namespace Modules\Mission\App\Http\Controllers;
 
+use App\Enums\Status;
 use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Modules\Mission\App\Services\MissionService;
+use Modules\Vacation\App\Services\VacationService;
 
 class MissionController extends Controller
 {
@@ -96,5 +98,29 @@ class MissionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    function checked($missionId)
+    {
+        try {
+            $this->missionService->update(data: ['status' => Status::PUBLISH], id: $missionId);
+            (new MissionService())->removeCacheMission();
+            return redirect()->back()->with('suc', 'با موفقیت تایید شد');
+        } catch (Exception $e) {
+            Log::error("mission published : " .$e->getMessage());
+            return redirect()->back()->with('err', 'در تایید ماموریت خطایی وجود دارد لطفا دوباره تلاش کید');
+        }
+    }
+
+    function unchecked($missionId)
+    {
+        try {
+            $this->missionService->update(data: ['status' => Status::DRAFT], id: $missionId);
+            (new MissionService())->removeCacheMission();
+            return redirect()->back()->with('suc', 'ماموریت رد شد');
+        } catch (Exception $e) {
+            Log::error("mission draft : " .$e->getMessage());
+            return redirect()->back()->with('err', 'در رد مرخصی ماموریت وجود دارد لطفا دوباره تلاش کید');
+        }
     }
 }
