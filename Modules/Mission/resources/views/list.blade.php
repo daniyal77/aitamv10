@@ -1,3 +1,4 @@
+@php use App\Enums\Status; @endphp
 @extends('base::layouts.master')
 @section('breadcrumb_name','لیست ماموریت روزانه')
 @section('content')
@@ -28,25 +29,30 @@
                                     <td>{{$mission->intro}}</td>
                                     <td>{{$mission->status()}}</td>
                                     <td>
-                                        @if($mission->status != 'publish')
+                                        @if($mission->status != Status::PUBLISH)
                                             <a class="btn btn-sm ml-1 btn-success" title="تایید ماموریت"
                                                href="{{ route('mission.checked',$mission->id) }}">
                                                 <i class="fas fa-check"></i>
                                             </a>
+                                        @endif
+                                        @if($mission->status == Status::PENDING)
                                             <a class="btn btn-sm ml-1 btn-info" title="ویرایش ماموریت"
                                                href="{{ route('mission.edit',$mission->id) }}">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-{{--                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"--}}
-{{--                                               href="{{ route('mission.destroy',$vacation->id) }}">--}}
-{{--                                                <i class="fas fa-trash"></i>--}}
-{{--                                            </a>--}}
-                                        @else
+                                        @endif
+
+                                        {{--                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"--}}
+                                        {{--                                               href="{{ route('mission.destroy',$vacation->id) }}">--}}
+                                        {{--                                                <i class="fas fa-trash"></i>--}}
+                                        {{--                                            </a>--}}
+                                        @if($mission->status != Status::DRAFT)
                                             <a class="btn btn-sm ml-1 btn-danger" title="عدم تایید"
                                                href="{{ route('mission.unchecked',$mission->id) }}">
                                                 <i class="fas fa-close"></i>
                                             </a>
                                         @endif
+
                                     </td>
                                 </tr>
                             @endforeach

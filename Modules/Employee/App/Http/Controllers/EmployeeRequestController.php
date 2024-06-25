@@ -11,6 +11,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Modules\Employee\App\Http\Requests\SaveEmployeeRequest;
 use Modules\Employee\App\Services\EmployeeRequestService;
 
 class EmployeeRequestController extends Controller
@@ -45,7 +46,7 @@ class EmployeeRequestController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(SaveEmployeeRequest $request): RedirectResponse
     {
         try {
             $this->employeeRequestService->createEmployee(

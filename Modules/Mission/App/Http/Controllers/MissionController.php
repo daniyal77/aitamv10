@@ -100,7 +100,7 @@ class MissionController extends Controller
         //
     }
 
-    function checked($missionId)
+    function checked($missionId): RedirectResponse
     {
         try {
             $this->missionService->update(data: ['status' => Status::PUBLISH], id: $missionId);
@@ -112,7 +112,7 @@ class MissionController extends Controller
         }
     }
 
-    function unchecked($missionId)
+    function unchecked($missionId): RedirectResponse
     {
         try {
             $this->missionService->update(data: ['status' => Status::DRAFT], id: $missionId);

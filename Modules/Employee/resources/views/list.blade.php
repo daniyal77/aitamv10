@@ -6,7 +6,8 @@
             <div class="card custom-card overflow-hidden">
                 <div class="card-header pb-2">
                     @if((request()->route()->getName() == 'employee.index'))
-                        <a class="btn btn-info" href="{{ route('employee.create') }}">جدید</a>
+                        <a class="btn btn-info" href="{{ route('employee.request.index') }}">درخواست های ارسال شده</a>
+                        <a class="btn btn-primary" href="{{ route('employee.create') }}">جدید</a>
                         <a class="btn btn-danger" href="{{ route('employee.trash') }}">مشاهده کارمندان حذف شده</a>
                     @else
                         <a class="btn btn-green" href="{{ route('employee.index') }}">مشاهده کارمندان فعال</a>

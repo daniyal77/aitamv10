@@ -33,7 +33,8 @@
                                         <span class="text-danger">*</span>
                                     </label>
 
-                                    <select id="skils" name="skils[]" multiple class="form-control">
+                                    <select required="required"
+                                            id="skils" name="skils[]" multiple class="form-control">
                                         <option value="ندارد">ندارد</option>
                                         @foreach($skills as $skils)
                                             <option value="{{$skils}}">{{$skils}}</option>
@@ -48,7 +49,7 @@
                                         <span class="text-danger">*</span>
                                     </label>
                                     <input type="file" id="file_resume" class="form-control-file"
-                                           name="file_resume">
+                                           required="required" name="file_resume">
                                 </div>
                             </div>
                         </div>
