@@ -3,18 +3,31 @@
 namespace Modules\Mission\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Modules\Mission\App\Services\MissionService;
 
 class MissionController extends Controller
 {
+    private MissionService $missionService;
+
+    public function __construct(MissionService $missionService)
+    {
+        $this->missionService = $missionService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('mission::index');
+        try {
+            $missions = $this->missionService->allMission();
+            return view('mission::list', compact('missions'));
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+        }
     }
 
     /**
@@ -22,7 +35,8 @@ class MissionController extends Controller
      */
     public function create()
     {
-        return view('mission::create');
+        $employees = $this->missionService->showEmployee();
+        return view('mission::create', compact('employees'));
     }
 
     /**
