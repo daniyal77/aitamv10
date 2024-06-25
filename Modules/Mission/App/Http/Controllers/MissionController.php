@@ -28,7 +28,7 @@ class MissionController extends Controller
             return view('mission::list', compact('missions'));
         } catch (Exception $e) {
             Log::error("mission day list : " . $e->getMessage() . "|" . $e->getLine());
-            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+            return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
         }
     }
 
@@ -65,6 +65,7 @@ class MissionController extends Controller
             return view('mission::edit', compact('mission'));
 
         } catch (Exception $e) {
+            Log::error("mission edit : " . $e->getMessage() . " line :" . $e->getLine());
             return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
         }
     }
@@ -72,9 +73,21 @@ class MissionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id): RedirectResponse
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            $this->missionService->updateMission(
+                id:        $id,
+                startDate: $request->start_date,
+                endDate:   $request->end_date,
+                intro:     $request->intro
+            );
+            return redirect()->route('mission.index')->with('suc', 'ماموریت با موفقیت ویرایش شد');
+        } catch (Exception $e) {
+            Log::error("mission update : " . $e->getMessage() . " line :" . $e->getLine());
+
+            return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
+        }
     }
 
     /**

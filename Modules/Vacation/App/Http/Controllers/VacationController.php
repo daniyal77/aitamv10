@@ -30,7 +30,7 @@ class VacationController extends Controller
             $vacations = $this->vacationService->allVacation();
             return view('vacation::list', compact('vacations'));
         } catch (Exception $e) {
-            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+            return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
         }
     }
 
@@ -66,7 +66,7 @@ class VacationController extends Controller
             $vacation = $this->vacationService->find(id: $id);;
             return view('vacation::edit', compact('vacation'));
         } catch (Exception $e) {
-            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+            return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
         }
     }
 
@@ -84,7 +84,7 @@ class VacationController extends Controller
             );
             return redirect()->route('vacation.index')->with('suc', 'مرخصی با موفقیت ویرایش شد');
         } catch (Exception $e) {
-            return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
+            return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
         }
     }
 
@@ -103,7 +103,7 @@ class VacationController extends Controller
             (new VacationService())->removeCacheVacation();
             return redirect()->back()->with('suc', 'با موفقیت تایید شد');
         } catch (Exception $e) {
-            return redirect()->back()->with('err', 'در تایید مرخصی خطلایی وجود دارد لطفا دوباره تلاش کید');
+            return redirect()->back()->with('err', 'در تایید مرخصی خطایی وجود دارد لطفا دوباره تلاش کید');
 
         }
     }
@@ -115,7 +115,7 @@ class VacationController extends Controller
             (new VacationService())->removeCacheVacation();
             return redirect()->back()->with('suc', 'مرخصی رد شد');
         } catch (Exception $e) {
-            return redirect()->back()->with('err', 'در رد مرخصی خطلایی وجود دارد لطفا دوباره تلاش کید');
+            return redirect()->back()->with('err', 'در رد مرخصی خطایی وجود دارد لطفا دوباره تلاش کید');
 
         }
     }

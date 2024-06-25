@@ -1,4 +1,5 @@
 @extends('base::layouts.master')
+@section('title','ویرایش مرخصی')
 @section('breadcrumb_name','ویرایش مرخصی')
 @section('content')
     <div class="row row-sm">
