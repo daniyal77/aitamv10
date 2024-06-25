@@ -29,6 +29,12 @@
                         <a class="nav-sub-link" href="{{ route('employee.index') }}">پرسنل</a>
                     </li>
                     <li class="nav-sub-item">
+                        <a class="nav-sub-link" href="{{ route('mission.create') }}">ماموریت روزانه</a>
+                    </li>
+                    <li class="nav-sub-item">
+                        <a class="nav-sub-link" href="{{ route('mission.index') }}">لیست ماموریت روزانه</a>
+                    </li>
+                    <li class="nav-sub-item">
                         <a class="nav-sub-link" href="{{ route('vacation.create') }}">مرخصی روزانه</a>
                     </li>
                     <li class="nav-sub-item">
