@@ -34,7 +34,7 @@ class VacationService extends ServiceModel
         //todo remove when login Auth::user()->id ??
         $data['user_id'] = 1;
         $this->create($data);
-        (new VacationService())->removeCacheVacation();
+       $this->removeCacheVacation();
     }
 
     function showEmployee()

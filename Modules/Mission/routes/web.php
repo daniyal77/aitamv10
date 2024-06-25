@@ -16,4 +16,8 @@ use Modules\Mission\App\Http\Controllers\MissionController;
 
 Route::group([], function () {
     Route::resource('mission', MissionController::class)->names('mission');
+
+    Route::get('mission-checked/{missionId}', [MissionController::class, 'checked'])->name('mission.checked');
+    Route::get('mission-unchecked/{missionId}', [MissionController::class, 'unchecked'])->name('mission.unchecked');
+
 });

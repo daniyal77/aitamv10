@@ -22,7 +22,7 @@
                             @foreach($missions as $key=>$mission)
                                 <tr>
                                     <td>{{$mission->id}}</td>
-                                    <td>{{@$vacation->employee->employeeRequest->full_name}}</td>
+                                    <td>{{@$mission->employee->employeeRequest->full_name}}</td>
                                     <td>{{$mission->start_date_jalali}}</td>
                                     <td>{{$mission->end_date_jalali}}</td>
                                     <td>{{$mission->intro}}</td>
@@ -30,20 +30,20 @@
                                     <td>
                                         @if($mission->status != 'publish')
                                             <a class="btn btn-sm ml-1 btn-success" title="تایید ماموریت"
-                                               href="{{ route('vacation.checked',$mission->id) }}">
+                                               href="{{ route('mission.checked',$mission->id) }}">
                                                 <i class="fas fa-check"></i>
                                             </a>
                                             <a class="btn btn-sm ml-1 btn-info" title="ویرایش ماموریت"
-                                               href="{{ route('vacation.edit',$mission->id) }}">
+                                               href="{{ route('mission.edit',$mission->id) }}">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            {{--                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"--}}
-                                            {{--                                               href="{{ route('vacation.destroy',$vacation->id) }}">--}}
-                                            {{--                                                <i class="fas fa-trash"></i>--}}
-                                            {{--                                            </a>--}}
+{{--                                            <a class="btn btn-sm ml-1 btn-danger" title="حذف مرخصی"--}}
+{{--                                               href="{{ route('mission.destroy',$vacation->id) }}">--}}
+{{--                                                <i class="fas fa-trash"></i>--}}
+{{--                                            </a>--}}
                                         @else
                                             <a class="btn btn-sm ml-1 btn-danger" title="عدم تایید"
-                                               href="{{ route('vacation.unchecked',$mission->id) }}">
+                                               href="{{ route('mission.unchecked',$mission->id) }}">
                                                 <i class="fas fa-close"></i>
                                             </a>
                                         @endif

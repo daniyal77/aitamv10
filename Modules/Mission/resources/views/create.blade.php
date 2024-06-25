@@ -6,7 +6,7 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <form id="form_validation" class="form-validate-summernote" method="post"
-                          action="{{ route('vacation.store') }}">
+                          action="{{ route('mission.store') }}">
                         @csrf
                         <div class="row row-sm">
                             <div class="col-lg-4 col-md-3 col-sm-6 col-12">

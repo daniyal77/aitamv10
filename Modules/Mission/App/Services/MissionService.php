@@ -26,6 +26,16 @@ class MissionService extends ServiceModel
         });
     }
 
+    function createMission($data)
+    {
+        $data['start_date'] = date('Y-m-d', $data['start_date']);
+        $data['end_date'] = date('Y-m-d', $data['end_date']);
+        //todo remove when login Auth::user()->id ??
+        $data['user_id'] = 1;
+        $this->create($data);
+        $this->removeCacheMission();
+    }
+
     function showEmployee()
     {
         return (new EmployeeService())->all();

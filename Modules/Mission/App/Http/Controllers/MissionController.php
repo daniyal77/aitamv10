@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Modules\Mission\App\Services\MissionService;
 
 class MissionController extends Controller
@@ -26,6 +27,7 @@ class MissionController extends Controller
             $missions = $this->missionService->allMission();
             return view('mission::list', compact('missions'));
         } catch (Exception $e) {
+            Log::error("mission day list : " . $e->getMessage() . "|" . $e->getLine());
             return redirect()->back()->with('err', 'خطلایی رخ داده لطفا دوباره تلاش نمایید');
         }
     }
@@ -44,7 +46,13 @@ class MissionController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //
+        try {
+            $this->missionService->createMission($request->all());
+            return redirect()->route('mission.index')->with('suc', 'ماموریت با موفقیت ذخیره شد');
+        } catch (Exception $e) {
+            Log::error("mission day create : " . $e->getMessage() . "|" . $e->getLine());
+            return redirect()->back()->with('err', 'در ثبت ماموریت خطایی رخ داده است');
+        }
     }
 
     /**

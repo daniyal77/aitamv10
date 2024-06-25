@@ -18,5 +18,5 @@ use Modules\Employee\App\Http\Controllers\EmployeeRequestController;
 Route::resource('employee', EmployeeController::class)->names('employee');
 Route::get('employee-trash', [EmployeeController::class, 'trash'])->name('employee.trash');
 
-
+//todo employee-request فرم ویلیدیشن رو درست کن
 Route::resource('employee-request', EmployeeRequestController::class)->names('employee.request');
