@@ -1,5 +1,6 @@
 @extends('base::layouts.master')
 @section('title','تعریف کارمند جدید')
+
 @section('content')
     <form enctype="multipart/form-data" action="{{ route('employee.request.store') }}" id="form_validation"
           class="form-validate-summernote" method="post">
@@ -9,7 +10,7 @@
                 <div class="card custom-card">
                     <div class="card-body">
                         <div class="row pb-4 mb-4 border-bottom row-sm">
-                            <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="name">نام
                                         <span class="text-danger">*</span>
@@ -18,7 +19,7 @@
                                            class="form-control">
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
                                     <label for="last_name"> نام خانوادگی<span
                                             class="text-danger">*</span></label>
@@ -26,7 +27,7 @@
                                            required="required">
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
                                     <label for="skils">
                                         مهارت
@@ -34,7 +35,7 @@
                                     </label>
 
                                     <select required="required"
-                                            id="skils" name="skils[]" multiple class="form-control">
+                                            id="skils" name="skils[]" multiple class="form-control select2 select2-hidden-accessible">
                                         <option value="ندارد">ندارد</option>
                                         @foreach($skills as $skils)
                                             <option value="{{$skils}}">{{$skils}}</option>
@@ -42,7 +43,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                                 <div class="form-group ">
                                     <label for="file_resume">
                                         فایل رزومه

@@ -5,21 +5,21 @@
     <style>
         @font-face {
             font-family: yekan;
-            src: url('{{asset('fonts/yekan-font/yekan-regular.eot')}}');
-            src: url('{{asset('fonts/yekan-font/yekan-regular.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/yekan-font/yekan-regular.woff')}}') format('woff'),
-            url('{{asset('fonts/yekan-font/yekan-regular.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/yekan-font/yekan-regular.eot')}}');
+            src: url('{{asset('assets/original/fonts/yekan-font/yekan-regular.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/yekan-font/yekan-regular.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/yekan-font/yekan-regular.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: tanha;
-            src: url('{{asset('fonts/tanha-font/Farsi-Digits/Tanha-FD.eot')}}');
-            src: url('{{asset('fonts/tanha-font/Farsi-Digits/Tanha-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/tanha-font/Farsi-Digits/Tanha-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/tanha-font/Farsi-Digits/Tanha-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/tanha-font/Farsi-Digits/Tanha-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/tanha-font/Farsi-Digits/Tanha-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/tanha-font/Farsi-Digits/Tanha-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/tanha-font/Farsi-Digits/Tanha-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/tanha-font/Farsi-Digits/Tanha-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/tanha-font/Farsi-Digits/Tanha-FD.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -27,20 +27,20 @@
         /*shabnam font*/
         @font-face {
             font-family: shabnam;
-            src: url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-FD.eot')}}');
-            src: url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-FD.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: shabnam-bold;
-            src: url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.eot')}}');
-            src: url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/shabnam/Farsi-Digits/Shabnam-Bold-FD.ttf')}}') format('truetype');
             font-weight: bold;
             font-style: normal;
         }
@@ -49,20 +49,20 @@
         /*vazir font*/
         @font-face {
             font-family: vazir;
-            src: url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.eot')}}');
-            src: url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Medium-FD.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: vazir-bold;
-            src: url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.eot')}}');
-            src: url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/vazir-font/Farsi-Digits/Vazir-Bold-FD.ttf')}}') format('truetype');
             font-weight: bold;
             font-style: normal;
         }
@@ -71,22 +71,22 @@
         /*shael font*/
         @font-face {
             font-family: shael;
-            src: url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-FD.eot')}}');
-            src: url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-FD.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: shael-bold;
-            src: url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.eot')}}');
-            src: url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/sahel-font/Farsi-Digits/Sahel-Bold-FD.ttf')}}') format('truetype');
             font-weight: bold;
         }
 
@@ -94,48 +94,44 @@
         /*samim font*/
         @font-face {
             font-family: samim;
-            src: url('{{asset('fonts/samim-font/Farsi-Digits/Samim-FD.eot')}}');
-            src: url('{{asset('fonts/samim-font/Farsi-Digits/Samim-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/samim-font/Farsi-Digits/Samim-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/samim-font/Farsi-Digits/Samim-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/samim-font/Farsi-Digits/Samim-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/samim-font/Samim-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/samim-font/Samim-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/samim-font/Samim-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/samim-font/Samim-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/samim-font/Samim-FD.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
-
         @font-face {
             font-family: samim-bold;
-            src: url('{{asset('fonts/samim-font/Farsi-Digits/Samim-Bold-FD.eot')}}');
-            src: url('{{asset('fonts/samim-font/Farsi-Digits/Samim-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/samim-font/Farsi-Digits/Samim-Bold-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/samim-font/Farsi-Digits/Samim-Bold-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/samim-font/Farsi-Digits/Samim-Bold-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/samim-font/Samim-Bold-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/samim-font/Samim-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/samim-font/Samim-Bold-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/samim-font/Samim-Bold-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/samim-font/Samim-Bold-FD.ttf')}}') format('truetype');
             font-weight: bold;
         }
-
         /*end samim font*/
         /*parasrto font*/
         @font-face {
             font-family: parsto;
-            src: url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-FD.eot')}}');
-            src: url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/parastoo-font/Parastoo-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/parastoo-font/Parastoo-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/parastoo-font/Parastoo-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/parastoo-font/Parastoo-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/parastoo-font/Parastoo-FD.ttf')}}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
-
         @font-face {
             font-family: parsto-bold;
-            src: url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-Bold-FD.eot')}}');
-            src: url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
-            url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-Bold-FD.woff')}}') format('woff'),
-            url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-Bold-FD.woff2')}}') format('woff2'),
-            url('{{asset('fonts/parastoo-font/web/Farsi-Digits/Parastoo-Bold-FD.ttf')}}') format('truetype');
+            src: url('{{asset('assets/original/fonts/parastoo-font/Parastoo-Bold-FD.eot')}}');
+            src: url('{{asset('assets/original/fonts/parastoo-font/Parastoo-Bold-FD.eot?#iefix')}}') format('FontName-opentype'),
+            url('{{asset('assets/original/fonts/parastoo-font/Parastoo-Bold-FD.woff')}}') format('woff'),
+            url('{{asset('assets/original/fonts/parastoo-font/Parastoo-Bold-FD.woff2')}}') format('woff2'),
+            url('{{asset('assets/original/fonts/parastoo-font/Parastoo-Bold-FD.ttf')}}') format('truetype');
             font-weight: bold;
         }
-
         /*end parasrto font*/
 
         <?php
@@ -148,7 +144,6 @@
             --primery_bold_font: {{$setting[$roleId. "-font-bold"] ?? 'parsto-bold'}} ;
             --size_text: {{$setting[$roleId. "-sizepx"]  ?? '14px'}}  ;
         }
-
         .btn-green {
             color: white !important;
             background-color: green !important;
@@ -245,10 +240,6 @@
 <script src="{{ asset('assets/admin/js/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/dataTables.bootstrap4.min.js') }}"></script>
-
-
-
-
 <script src="{{ asset('assets/original/js/sweet-alert/sweetalert.min.js') }}"></script>
 @stack('script')
 </body>
