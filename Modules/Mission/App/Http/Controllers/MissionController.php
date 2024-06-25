@@ -56,19 +56,17 @@ class MissionController extends Controller
     }
 
     /**
-     * Show the specified resource.
-     */
-    public function show($id)
-    {
-        return view('mission::show');
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit($id)
     {
-        return view('mission::edit');
+        try {
+            $mission = $this->missionService->find(id: $id);;
+            return view('mission::edit', compact('mission'));
+
+        } catch (Exception $e) {
+            return redirect()->back()->with('err', 'خطایی رخ داده لطفا دوباره تلاش نمایید');
+        }
     }
 
     /**
